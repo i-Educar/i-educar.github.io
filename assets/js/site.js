@@ -3,7 +3,7 @@
     {
       src: "assets/img/tela-ieducar-gestao.jpg",
       url: "painel da secretaria",
-      title: "Passo da operação 1 · Painel da secretaria",
+      title: "Rede · Painel da secretaria",
       desc: "Ponto de partida da decisão operacional: indicadores da rede a partir do cadastro único — sem pedir planilha escola por escola.",
       pros: [
         "Um número oficial para apresentar ao gabinete e ao conselho",
@@ -14,7 +14,7 @@
     {
       src: "assets/img/tela-matricula.jpg",
       url: "matrícula",
-      title: "Passo da operação 1 · Matrícula oficial",
+      title: "Rede · Matrícula oficial",
       desc: "Base de toda a cadeia decisória: pessoa e matrícula oficiais alimentam diário, fila, Censo, transporte e documentos.",
       pros: [
         "Histórico do aluno permanece na rede, não em pasta solta",
@@ -25,7 +25,7 @@
     {
       src: "assets/img/tela-idiario.jpg",
       url: "i-diario",
-      title: "Passo da operação 2 · i-Diário",
+      title: "Rede · i-Diário",
       desc: "Depois do núcleo: o professor lança na sala e a SME já lê frequência e notas — sem cadastro paralelo.",
       pros: [
         "Acaba a digitação duplicada de frequência e notas",
@@ -36,7 +36,7 @@
     {
       src: "assets/img/tela-fila.jpg",
       url: "pré-matrícula",
-      title: "Passo da operação 3 · Pré-matrícula",
+      title: "Rede · Pré-matrícula",
       desc: "Com a base estável, a família entra na fila com critério público — a SME planeja oferta com demanda real.",
       pros: [
         "Transparência para famílias e para a gestão",
@@ -47,7 +47,7 @@
     {
       src: "assets/img/tela-censo.jpg",
       url: "educacenso",
-      title: "Passo da operação 4 · Educacenso",
+      title: "Rede · Educacenso",
       desc: "O Censo aproveita o cadastro do ano. Na decisão do gestor: menos risco político e menos correção no prazo final.",
       pros: [
         "Reduz risco de erro no prazo do Censo",
@@ -58,7 +58,7 @@
     {
       src: "assets/img/tela-transporte.jpg",
       url: "transporte",
-      title: "Passo da operação 5 · Transporte",
+      title: "Rede · Transporte",
       desc: "Módulo sob demanda: rotas e frota ligadas à matrícula oficial — entra quando a logística é prioridade da gestão.",
       pros: [
         "Ocupação alinhada ao aluno matriculado",
@@ -69,7 +69,7 @@
     {
       src: "assets/img/tela-relatorios.jpg",
       url: "documentos",
-      title: "Passo da operação 5 · Documentos",
+      title: "Rede · Documentos",
       desc: "Emissão oficial a partir da mesma base — atendimento ao cidadão sem processo manual demorado.",
       pros: [
         "Emissão sem depender de processo manual demorado",
@@ -80,7 +80,7 @@
     {
       src: "assets/img/tela-servlitcys.jpg",
       url: "servlitcys",
-      title: "Passo da operação 6 · SERVLITCYS",
+      title: "Rede · SERVLITCYS",
       desc: "Camada de leitura para gabinete e conselhos: cruza a base local com FUNDEB, Censo e território.",
       pros: [
         "Apoia priorização e diagnóstico da rede",
@@ -91,7 +91,7 @@
     {
       src: "assets/img/tela-moodle.jpg",
       url: "moodle",
-      title: "Passo 4 da decisão · Moodle",
+      title: "Equipe · Moodle",
       desc: "Capacitação entra depois de definir o pacote e o fluxo — para a equipe operar com padrão antes de escalar.",
       pros: [
         "Padroniza o treinamento em vários municípios",
@@ -194,4 +194,33 @@
   document.querySelectorAll("a.btn-disabled").forEach((a) => {
     a.addEventListener("click", (e) => e.preventDefault());
   });
+
+  // Destaca no menu o tema da seção visível (mapa de escolha)
+  const navLinks = [...document.querySelectorAll(".nav a[href^='#']")];
+  const sectionIds = navLinks.map((a) => a.getAttribute("href").slice(1));
+  const sections = sectionIds
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  const setActiveNav = (id) => {
+    navLinks.forEach((a) => {
+      const on = a.getAttribute("href") === `#${id}`;
+      a.classList.toggle("is-active", on);
+      if (on) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  };
+
+  if (sections.length && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible?.target?.id) setActiveNav(visible.target.id);
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: [0.1, 0.25, 0.5] }
+    );
+    sections.forEach((s) => io.observe(s));
+  }
 })();

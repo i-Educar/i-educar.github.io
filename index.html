@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>i-Educar — rota de decisão para gestores da rede municipal</title>
-  <meta name="description" content="Fluxo de decisão para secretários e gestores: diagnóstico, solução, operação, capacitação, evidências, demonstração e implantação do ecossistema i-Educar.">
-  <meta property="og:title" content="i-Educar — rota de decisão para gestores da rede municipal">
-  <meta property="og:description" content="Do problema da planilha à decisão de implantar: um caminho claro para a secretaria municipal.">
-  <meta property="og:image" content="https://i-educar.github.io/assets/img/ieducar-og.png">
+  <title>i-Educar — gestão da educação pública municipal</title>
+  <meta name="description" content="Para gestores da educação pública: escolha por onde começar — desafio da rede, pacote do sistema, fluxo escola–sala–família, capacitação, evidências e implantação.">
+  <meta property="og:title" content="i-Educar — gestão da educação pública municipal">
+  <meta property="og:description" content="Da secretaria à sala de aula e à família: software público para a rede municipal decidir com segurança.">
+  <meta property="og:image" content="https://i-educar.github.io/assets/img/hero-educacao-publica.jpg">
+  <meta property="og:locale" content="pt_BR">
   <meta property="og:url" content="https://i-educar.github.io/">
   <link rel="canonical" href="https://i-educar.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#0e7f6c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,56 +30,82 @@
         </span>
         i-Educar <small>org</small>
       </a>
-      <nav class="nav" aria-label="Rota de decisão">
-        <a href="#diagnostico">1. Diagnóstico</a>
-        <a href="#solucao">2. Solução</a>
-        <a href="#operacao">3. Operação</a>
-        <a href="#capacitacao">4. Capacitação</a>
-        <a href="#evidencias">5. Evidências</a>
-        <a href="#avaliar">6. Avaliar</a>
-        <a href="#decisao">7. Decidir</a>
+      <nav class="nav" aria-label="Mapa de escolha">
+        <a href="#desafio">Desafio</a>
+        <a href="#pacote">Pacote</a>
+        <a href="#rede">Rede</a>
+        <a href="#equipe-treino">Equipe</a>
+        <a href="#provas">Provas</a>
+        <a href="#testar">Testar</a>
+        <a href="#implantar">Implantar</a>
       </nav>
     </div>
   </header>
 
   <main id="topo">
     <!-- 0. PROPOSTA -->
-    <section class="hero" aria-label="Proposta">
+    <section class="hero" aria-label="Educação pública municipal">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/img/tela-ieducar-gestao.jpg" alt="" width="1600" height="900">
+        <img src="assets/img/hero-educacao-publica.jpg" alt="" width="1920" height="1080">
       </div>
       <div class="wrap">
-        <p class="eyebrow">Rota de decisão para secretarias · Software Público · GPL v2</p>
-        <h1>Da planilha à decisão: um sistema para a rede inteira</h1>
+        <p class="eyebrow">Educação pública municipal · Software Público Brasileiro · GPL v2</p>
+        <h1>Secretaria, escola e sala na mesma rede</h1>
         <p class="lede">
-          Este site segue o caminho que o gestor precisa percorrer: entender o problema,
-          ver a solução, checar a operação, capacitar a equipe, olhar evidências e só então decidir.
+          O i-Educar organiza o fluxo da educação pública: da matrícula na secretaria à
+          chamada na sala, da vaga da família ao Educacenso e aos indicadores do gabinete.
+          Escolha abaixo o ponto em que a sua gestão precisa avançar agora.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#diagnostico">Começar pelo diagnóstico</a>
-          <a class="btn btn-ghost" href="#decisao">Ir para a decisão</a>
+          <a class="btn btn-primary" href="#desafio">Ver o desafio da rede</a>
+          <a class="btn btn-ghost" href="#implantar">Ir para implantar</a>
         </div>
       </div>
     </section>
 
     <!-- JOURNEY + DIAGNÓSTICO + RESULTADOS -->
-    <section id="diagnostico" class="band band-ink" aria-label="Diagnóstico">
+    <section id="desafio" class="band band-ink" aria-label="Desafio da rede">
       <div class="section wrap reveal">
-        <p class="kicker">Passo 1 · Diagnóstico</p>
-        <h2>Onde a gestão perde tempo e confiabilidade</h2>
+        <p class="kicker">Escolha · Desafio</p>
+        <h2>Onde a educação pública perde tempo e confiabilidade</h2>
         <p class="lead">
           Se cada escola guarda o dado à sua maneira, a secretaria gasta a semana consolidando
-          planilhas — e ainda assim não tem um número único para gabinete, Censo e atendimento às famílias.
+          planilhas — e ainda assim não tem um número único para gabinete, Educacenso e atendimento às famílias.
         </p>
 
-        <nav class="journey" aria-label="Mapa da decisão">
-          <a href="#diagnostico"><span class="step">Passo 1</span><strong>Diagnóstico</strong><span>Por que mudar</span></a>
-          <a href="#solucao"><span class="step">Passo 2</span><strong>Solução</strong><span>O que entra no pacote</span></a>
-          <a href="#operacao"><span class="step">Passo 3</span><strong>Operação</strong><span>Como a rede usa</span></a>
-          <a href="#capacitacao"><span class="step">Passo 4</span><strong>Capacitação</strong><span>Como a equipe aprende</span></a>
-          <a href="#evidencias"><span class="step">Passo 5</span><strong>Evidências</strong><span>Telas e materiais</span></a>
-          <a href="#avaliar"><span class="step">Passo 6</span><strong>Avaliar</strong><span>Testar e decidir</span></a>
-        </nav>
+        <div class="choice-intro">
+          <p class="choice-label">Mapa de escolha — entre pelo ponto que a sua gestão precisa agora</p>
+          <nav class="choice-map" aria-label="Mapa de escolha">
+            <a href="#desafio" class="is-here" aria-current="true">
+              <strong>Desafio</strong>
+              <span>Por que a rede precisa mudar</span>
+            </a>
+            <a href="#pacote">
+              <strong>Pacote</strong>
+              <span>O que a secretaria passa a ter</span>
+            </a>
+            <a href="#rede">
+              <strong>Rede</strong>
+              <span>Secretaria → escola → sala → família</span>
+            </a>
+            <a href="#equipe-treino">
+              <strong>Equipe</strong>
+              <span>Como capacitar antes de escalar</span>
+            </a>
+            <a href="#provas">
+              <strong>Provas</strong>
+              <span>Telas e PDFs para a reunião</span>
+            </a>
+            <a href="#testar">
+              <strong>Testar</strong>
+              <span>Validar com a equipe</span>
+            </a>
+            <a href="#implantar">
+              <strong>Implantar</strong>
+              <span>Governança e quem leva adiante</span>
+            </a>
+          </nav>
+        </div>
 
         <div class="grid-3">
           <article class="card">
@@ -103,9 +135,9 @@
     </section>
 
     <!-- SOLUÇÃO -->
-    <section id="solucao" class="band band-paper">
+    <section id="pacote" class="band band-paper">
       <div class="section wrap reveal">
-        <p class="kicker">Passo 2 · Solução</p>
+        <p class="kicker">Escolha · Pacote</p>
         <h2>O que a secretaria passa a ter no pacote</h2>
         <p class="lead">
           Decida pelo núcleo (i-Educar), pelo microssistema do professor (i-Diário) e pelos módulos
@@ -114,19 +146,19 @@
         <div class="grid-3">
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-school"></use></svg></div>
-            <h3>1º · Núcleo i-Educar</h3>
+            <h3>Núcleo i-Educar</h3>
             <p>Cadastro único, matrícula, servidores, documentos e Educacenso. É a base da decisão: sem isso, o resto não se sustenta.</p>
             <div class="pill-row"><span class="pill">Prioridade máxima</span><span class="pill">Portábilis</span></div>
           </article>
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
-            <h3>2º · i-Diário</h3>
+            <h3>i-Diário</h3>
             <p>Microssistema do professor na mesma base. Entra em seguida para eliminar digitação duplicada de frequência e notas.</p>
             <div class="pill-row"><span class="pill">Logo após o núcleo</span><span class="pill">Microssistema</span></div>
           </article>
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-puzzle"></use></svg></div>
-            <h3>3º · Módulos sob demanda</h3>
+            <h3>Módulos sob demanda</h3>
             <p>Pré-matrícula, transporte, relatórios, gov.br, biometria e analytics — conforme a prioridade política da gestão.</p>
             <div class="pill-row"><span class="pill">Sob demanda</span><span class="pill">Buriti</span></div>
           </article>
@@ -140,10 +172,10 @@
     </section>
 
     <!-- OPERAÇÃO (fluxo) -->
-    <section id="operacao" class="band band-soft">
+    <section id="rede" class="band band-soft">
       <div class="section wrap reveal">
-        <p class="kicker">Passo 3 · Operação</p>
-        <h2>Como a informação sobe até a decisão</h2>
+        <p class="kicker">Escolha · Rede</p>
+        <h2>Como a informação sobe na educação pública</h2>
         <p class="lead">
           Ordem recomendada de uso na rede: do cadastro da secretaria à sala de aula, à família,
           ao Censo, ao transporte e aos indicadores do gabinete.
@@ -200,12 +232,12 @@
             <h2>O professor lança na sala. A secretaria já vê.</h2>
             <p class="lead">
               O i-Diário é o microssistema pedagógico conectado ao i-Educar: produto próprio do professor,
-              sem cadastro paralelo. Entra no passo 2 da operação, depois que o núcleo está estabilizado.
+              sem cadastro paralelo. Entra depois que o núcleo da secretaria está estabilizado.
             </p>
-            <a class="btn btn-dark" href="#evidencias" data-open-album="2">Ver tela do i-Diário</a>
+            <a class="btn btn-dark" href="#provas" data-open-album="2">Ver tela do i-Diário</a>
           </div>
           <div class="device">
-            <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>passo 2 · i-diario</span></div>
+            <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>rede · i-diario</span></div>
             <div class="device-screen">
               <img src="assets/img/tela-idiario.jpg" width="1600" height="900" alt="Tela do i-Diário" loading="lazy">
             </div>
@@ -215,11 +247,11 @@
     </section>
 
     <!-- CAPACITAÇÃO -->
-    <section id="capacitacao" class="band band-paper">
+    <section id="equipe-treino" class="band band-paper">
       <div class="section wrap reveal">
         <div class="feature-row reverse">
           <div class="feature-copy">
-            <p class="kicker">Passo 4 · Capacitação</p>
+            <p class="kicker">Escolha · Equipe</p>
             <h2>Treinar a equipe antes de escalar o uso</h2>
             <p class="lead">
               Depois de definir o pacote e o fluxo operacional, a decisão segura inclui capacitação.
@@ -262,11 +294,11 @@
     </section>
 
     <!-- EVIDÊNCIAS -->
-    <section id="evidencias" class="band band-soft">
+    <section id="provas" class="band band-soft">
       <div class="section wrap-wide reveal">
         <div class="album-head">
           <div>
-            <p class="kicker">Passo 5 · Evidências</p>
+            <p class="kicker">Escolha · Provas</p>
             <h2>Comprove na tela antes de fechar a pauta</h2>
             <p class="lead">Álbum na ordem da operação: secretaria → professor → família → Censo → transporte → documentos → indicadores → capacitação.</p>
           </div>
@@ -277,56 +309,56 @@
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1 · secretaria</span></div>
               <div class="device-screen"><img src="assets/img/tela-ieducar-gestao.jpg" alt="Painel" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>1. Painel da secretaria</strong><span>Visão da rede</span></div>
+            <div class="meta"><strong>Painel da secretaria</strong><span>Visão da rede</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="1">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1 · matrícula</span></div>
               <div class="device-screen"><img src="assets/img/tela-matricula.jpg" alt="Matrícula" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>1. Matrícula</strong><span>Cadastro oficial</span></div>
+            <div class="meta"><strong>Matrícula</strong><span>Cadastro oficial</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="2">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>2 · i-diario</span></div>
               <div class="device-screen"><img src="assets/img/tela-idiario.jpg" alt="i-Diário" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>2. i-Diário</strong><span>Professor na base</span></div>
+            <div class="meta"><strong>i-Diário</strong><span>Professor na base</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="3">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>3 · vagas</span></div>
               <div class="device-screen"><img src="assets/img/tela-fila.jpg" alt="Fila" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>3. Pré-matrícula</strong><span>Fila transparente</span></div>
+            <div class="meta"><strong>Pré-matrícula</strong><span>Fila transparente</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="4">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>4 · censo</span></div>
               <div class="device-screen"><img src="assets/img/tela-censo.jpg" alt="Censo" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>4. Educacenso</strong><span>Menos correção final</span></div>
+            <div class="meta"><strong>Educacenso</strong><span>Menos correção final</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="5">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5 · transporte</span></div>
               <div class="device-screen"><img src="assets/img/tela-transporte.jpg" alt="Transporte" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>5. Transporte</strong><span>Rota ligada ao aluno</span></div>
+            <div class="meta"><strong>Transporte</strong><span>Rota ligada ao aluno</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="6">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5 · documentos</span></div>
               <div class="device-screen"><img src="assets/img/tela-relatorios.jpg" alt="Documentos" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>5. Documentos</strong><span>Boletim com QR Code</span></div>
+            <div class="meta"><strong>Documentos</strong><span>Boletim com QR Code</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="7">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>6 · indicadores</span></div>
               <div class="device-screen"><img src="assets/img/tela-servlitcys.jpg" alt="SERVLITCYS" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>6. SERVLITCYS</strong><span>Indicadores para decidir</span></div>
+            <div class="meta"><strong>SERVLITCYS</strong><span>Indicadores para decidir</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="8">
             <div class="device">
@@ -363,9 +395,9 @@
     </section>
 
     <!-- AVALIAR -->
-    <section id="avaliar" class="band band-paper">
+    <section id="testar" class="band band-paper">
       <div class="section wrap reveal">
-        <p class="kicker">Passo 6 · Avaliar</p>
+        <p class="kicker">Escolha · Testar</p>
         <h2>Teste com a equipe antes de comprometer a rede</h2>
         <p class="lead">
           Ambientes de demonstração para validar o fluxo com SME, escola e professor.
@@ -374,42 +406,42 @@
         <div class="test-grid">
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>1. i-Educar</h3>
+            <h3>i-Educar</h3>
             <p>Validar cadastro, matrícula e visão da secretaria.</p>
             <span class="url">demo.i-educar.example /login</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir demonstração</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>2. i-Diário</h3>
+            <h3>i-Diário</h3>
             <p>Validar chamada e notas na mesma base.</p>
             <span class="url">diario.i-educar.example /login</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir demonstração</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>3. Pré-matrícula</h3>
+            <h3>Pré-matrícula</h3>
             <p>Validar fila e experiência da família.</p>
             <span class="url">vagas.i-educar.example</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir portal</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>4. Moodle</h3>
+            <h3>Moodle</h3>
             <p>Validar trilhas de capacitação da equipe.</p>
             <span class="url">treino.i-educar.example</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir ambiente</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>5. Transporte</h3>
+            <h3>Transporte</h3>
             <p>Validar rotas e portal da família.</p>
             <span class="url">transporte.i-educar.example</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir módulo</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>6. SERVLITCYS</h3>
+            <h3>SERVLITCYS</h3>
             <p>Validar painéis para reunião de gestão.</p>
             <span class="url">analise.serventecassessoria.com.br</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir analytics</a>
@@ -419,9 +451,9 @@
     </section>
 
     <!-- CONFIANÇA + AMPLIAÇÃO + PARCEIROS + DECISÃO -->
-    <section id="decisao" class="band band-soft">
+    <section id="implantar" class="band band-soft">
       <div class="section wrap reveal">
-        <p class="kicker">Passo 7 · Decidir com segurança</p>
+        <p class="kicker">Escolha · Implantar</p>
         <h2>Governança, ampliação e quem implementa</h2>
         <p class="lead">
           Antes de fechar: quem mantém o núcleo, o que pode ser ampliado depois e quem leva a implantação até a sua rede.
@@ -488,12 +520,12 @@
         <p class="kicker">Fechar a decisão</p>
         <h2>Pronto para pautar a implantação na sua secretaria?</h2>
         <p class="lead">
-          Você percorreu diagnóstico → solução → operação → capacitação → evidências → avaliação.
-          O próximo passo é conversar sobre escopo, cronograma e capacitação híbrida.
+          Desafio, pacote, rede, equipe, provas e teste já estão no mapa.
+          O próximo movimento é conversar sobre escopo, cronograma e capacitação híbrida.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://librecode.coop" rel="noopener noreferrer">Solicitar conversa comercial</a>
-          <a class="btn btn-ghost" href="#avaliar">Revisar ambientes de teste</a>
+          <a class="btn btn-ghost" href="#testar">Revisar ambientes de teste</a>
           <a class="btn btn-ghost" href="docs/documentacao-padrao.pdf">Baixar material do gabinete</a>
         </div>
       </div>
@@ -503,12 +535,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <strong>i-Educar</strong> · rota de decisão para gestores · upstream Portábilis<br>
+        <strong>i-Educar</strong> · educação pública municipal · upstream Portábilis<br>
         GPL v2 · Buriti · <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>
       </div>
       <div>
-        <a href="#diagnostico">Diagnóstico</a> ·
-        <a href="#decisao">Decisão</a> ·
+        <a href="#desafio">Desafio</a> ·
+        <a href="#implantar">Implantar</a> ·
         <a href="docs/documentacao-padrao.pdf">PDF</a>
       </div>
     </div>
