@@ -238,4 +238,40 @@
     toggleToTop();
     window.addEventListener("scroll", toggleToTop, { passive: true });
   }
+
+  // Cookies / privacidade
+  const COOKIE_KEY = "ieducar_cookie_consent";
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("cookie-accept");
+  const rejectBtn = document.getElementById("cookie-reject");
+  const settingsBtn = document.getElementById("cookie-settings");
+
+  const readConsent = () => {
+    try { return localStorage.getItem(COOKIE_KEY); } catch (_) { return null; }
+  };
+  const writeConsent = (value) => {
+    try { localStorage.setItem(COOKIE_KEY, value); } catch (_) {}
+  };
+  const showBanner = () => {
+    if (!banner) return;
+    banner.hidden = false;
+  };
+  const hideBanner = () => {
+    if (!banner) return;
+    banner.hidden = true;
+  };
+
+  if (banner && !readConsent()) showBanner();
+
+  acceptBtn?.addEventListener("click", () => {
+    writeConsent("accepted");
+    hideBanner();
+  });
+  rejectBtn?.addEventListener("click", () => {
+    writeConsent("essential");
+    hideBanner();
+  });
+  settingsBtn?.addEventListener("click", () => {
+    showBanner();
+  });
 })();

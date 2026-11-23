@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=coop1">
+  <link rel="stylesheet" href="assets/css/site.css?v=priv1">
 </head>
 <body>
   <header class="site-header">
@@ -569,6 +569,7 @@
         <p class="footer-heading">Recursos</p>
         <ul>
           <li><a href="https://buriti.dev.br/public/#contato" rel="noopener noreferrer">Pedir contato</a></li>
+          <li><a href="privacidade.html">Privacidade e cookies</a></li>
           <li><a href="docs/documentacao-padrao.pdf">Material padrão (PDF)</a></li>
           <li><a href="docs/implantacao-consultoria.pdf">Roteiro de implantação</a></li>
           <li><a href="docs/apresentacao-gestao-educacional.pdf">Apresentação gerencial</a></li>
@@ -580,13 +581,34 @@
 
     <div class="footer-bar">
       <div class="wrap footer-bar-inner">
-        <p>Cooperação Buriti · LibreCode · alinhadas ao upstream Portábilis</p>
+        <p>
+          Cooperação Buriti · LibreCode · alinhadas ao upstream Portábilis
+          · <a href="privacidade.html">Privacidade</a>
+          · <button type="button" class="footer-linkish" id="cookie-settings">Gerenciar cookies</button>
+        </p>
         <a class="footer-top" href="#topo">Voltar ao topo</a>
       </div>
     </div>
   </footer>
 
   <a class="to-top" href="#topo" id="to-top" aria-label="Voltar ao topo" hidden>↑</a>
+
+  <div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-labelledby="cookie-title" aria-live="polite">
+    <div class="cookie-banner-inner wrap">
+      <div class="cookie-copy">
+        <p id="cookie-title"><strong>Cookies e privacidade</strong></p>
+        <p>
+          Usamos armazenamento local para lembrar sua preferência e podemos carregar fontes de terceiros.
+          Ao continuar, você pode aceitar ou manter apenas o essencial.
+          Veja o <a href="privacidade.html">aviso de privacidade e uso de dados</a>.
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-outline" id="cookie-reject">Apenas essenciais</button>
+        <button type="button" class="btn btn-dark" id="cookie-accept">Aceitar</button>
+      </div>
+    </div>
+  </div>
 
   <div class="lightbox" id="lightbox" hidden aria-hidden="true">
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lb-title">
@@ -613,6 +635,6 @@
     </div>
   </div>
 
-  <script src="assets/js/site.js?v=coop1"></script>
+  <script src="assets/js/site.js?v=priv1"></script>
 </body>
 </html>
