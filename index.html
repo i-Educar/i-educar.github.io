@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=priv1">
+  <link rel="stylesheet" href="assets/css/site.css?v=actors1">
 </head>
 <body>
   <header class="site-header">
@@ -147,51 +147,105 @@
         <p class="kicker">Fluxo da rede</p>
         <h2>Como a informação sobe na educação pública</h2>
         <p class="lead">
-          Ordem recomendada de uso na rede: do cadastro da secretaria à sala de aula, à família,
-          ao Censo, ao transporte e aos indicadores do gabinete.
+          Cada etapa tem atores diferentes: quem lança, quem governa e quem decide.
+          Da secretaria à sala, à família, ao Censo, ao transporte e ao gabinete.
         </p>
 
         <ol class="flow-steps">
           <li>
-            <div>
+            <div class="flow-body">
+              <div class="flow-actors" aria-label="Atores da etapa">
+                <span class="actor actor-sme">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-manager"></use></svg></span>
+                  <span class="actor-text"><strong>SME</strong><em>Decide e cadastra</em></span>
+                </span>
+                <span class="actor actor-school">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-school"></use></svg></span>
+                  <span class="actor-text"><strong>Direção</strong><em>Confere a escola</em></span>
+                </span>
+              </div>
               <h3>Secretaria cadastra a rede no i-Educar</h3>
               <p>Escolas, turmas, alunos, servidores e matrículas ficam em uma base só. Esse é o ponto de partida de toda a gestão.</p>
-              <span class="for-who">Quem decide: SME e direção</span>
             </div>
           </li>
           <li id="idiario">
-            <div>
+            <div class="flow-body">
+              <div class="flow-actors" aria-label="Atores da etapa">
+                <span class="actor actor-teacher">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-teacher"></use></svg></span>
+                  <span class="actor-text"><strong>Professor</strong><em>Lança na sala</em></span>
+                </span>
+                <span class="actor actor-sme">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-manager"></use></svg></span>
+                  <span class="actor-text"><strong>SME</strong><em>Governa o dado</em></span>
+                </span>
+              </div>
               <h3>Professor lança no i-Diário (mesma base)</h3>
               <p>Chamada, notas e planejamento na sala. A secretaria deixa de redigitar o que já foi lançado na turma.</p>
-              <span class="for-who">Quem usa: professor · Quem governa o dado: SME</span>
             </div>
           </li>
           <li>
-            <div>
+            <div class="flow-body">
+              <div class="flow-actors" aria-label="Atores da etapa">
+                <span class="actor actor-family">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-family"></use></svg></span>
+                  <span class="actor-text"><strong>Família</strong><em>Pede a vaga</em></span>
+                </span>
+                <span class="actor actor-sme">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-manager"></use></svg></span>
+                  <span class="actor-text"><strong>SME</strong><em>Regula a fila</em></span>
+                </span>
+              </div>
               <h3>Família acessa vaga pela pré-matrícula</h3>
               <p>Fila e critérios transparentes reduzem conflito na porta da escola e dão demanda real para o planejamento de oferta.</p>
-              <span class="for-who">Quem usa: família · Quem regula: SME</span>
             </div>
           </li>
           <li>
-            <div>
+            <div class="flow-body">
+              <div class="flow-actors" aria-label="Atores da etapa">
+                <span class="actor actor-ops">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></span>
+                  <span class="actor-text"><strong>Equipe do Censo</strong><em>Exporta e valida</em></span>
+                </span>
+                <span class="actor actor-sme">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-manager"></use></svg></span>
+                  <span class="actor-text"><strong>SME</strong><em>Responde ao INEP</em></span>
+                </span>
+              </div>
               <h3>Rede exporta o Educacenso com menos retrabalho</h3>
               <p>O Censo aproveita o cadastro do ano — não uma força-tarefa paralela no prazo final.</p>
-              <span class="for-who">Quem responde: SME / equipe do Censo</span>
             </div>
           </li>
           <li>
-            <div>
+            <div class="flow-body">
+              <div class="flow-actors" aria-label="Atores da etapa">
+                <span class="actor actor-ops">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-bus"></use></svg></span>
+                  <span class="actor-text"><strong>Transporte</strong><em>Opera a rota</em></span>
+                </span>
+                <span class="actor actor-school">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-person"></use></svg></span>
+                  <span class="actor-text"><strong>Secretaria escolar</strong><em>Emite documentos</em></span>
+                </span>
+              </div>
               <h3>Transporte e documentos acompanham o aluno</h3>
               <p>Rotas e emissão de boletins usam a matrícula oficial — menos divergência entre setores.</p>
-              <span class="for-who">Quem opera: transporte, secretaria escolar</span>
             </div>
           </li>
           <li>
-            <div>
+            <div class="flow-body">
+              <div class="flow-actors" aria-label="Atores da etapa">
+                <span class="actor actor-cabinet">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-chart"></use></svg></span>
+                  <span class="actor-text"><strong>Secretário / gabinete</strong><em>Decide com indicador</em></span>
+                </span>
+                <span class="actor actor-council">
+                  <span class="actor-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-council"></use></svg></span>
+                  <span class="actor-text"><strong>Conselhos</strong><em>Acompanham a rede</em></span>
+                </span>
+              </div>
               <h3>Gestão lê indicadores e decide</h3>
               <p>Painéis e SERVLITCYS cruzam a base local com FUNDEB, Censo e território para priorizar ação.</p>
-              <span class="for-who">Quem decide: secretário, gabinete, conselhos</span>
             </div>
           </li>
         </ol>
@@ -635,6 +689,6 @@
     </div>
   </div>
 
-  <script src="assets/js/site.js?v=priv1"></script>
+  <script src="assets/js/site.js?v=actors1"></script>
 </body>
 </html>
