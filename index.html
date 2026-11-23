@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>i-Educar — software livre de gestão escolar</title>
-  <meta name="description" content="Página institucional do ecossistema i-Educar: identidade Buriti, Portábilis, plugins, fluxos técnicos, telas e SERVLITCYS.">
+  <meta name="description" content="Página institucional do i-Educar: gestão escolar pública, álbum de telas, Portábilis, plugins Buriti, LibreCode e SERVLITCYS.">
   <meta property="og:title" content="i-Educar — software livre de gestão escolar">
   <meta property="og:description" content="Gestão escolar pública, aberta e extensível. Mantido pela Portábilis, evoluído pela Buriti com LibreCode.">
-  <meta property="og:url" content="https://i-educar.github.io/">
   <meta property="og:image" content="https://i-educar.github.io/assets/img/ieducar-og.png">
-  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://i-educar.github.io/">
   <link rel="canonical" href="https://i-educar.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,25 +16,18 @@
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-  <div hidden>
-    <!-- sprite loaded once -->
-    <object data="assets/icons/sprite.svg" type="image/svg+xml" tabindex="-1" aria-hidden="true"></object>
-  </div>
-
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="#topo">
         <span class="brand-mark" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-school"></use></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
         </span>
-        i-Educar
-        <span class="sub">org</span>
+        i-Educar <em>org</em>
       </a>
       <nav class="nav" aria-label="Seções">
-        <a href="#software">Software</a>
-        <a href="#fluxos">Fluxos</a>
-        <a href="#telas">Telas</a>
-        <a href="#portabilis">Portábilis</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#album">Telas</a>
+        <a href="#tecnologia">Tecnologia</a>
         <a href="#documentacao">Docs</a>
         <a href="#plugins">Plugins</a>
         <a href="#servlitcys">SERVLITCYS</a>
@@ -46,306 +38,181 @@
 
   <main id="topo">
     <section class="hero" aria-label="Apresentação">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">
-            <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"></use></svg>
-            Software Público Brasileiro · GPL v2
-          </p>
-          <h1>i-Educar</h1>
-          <p class="lede">
-            A gestão da escola pública em base única: matrícula, frequência, avaliação,
-            Censo e extensões modernas — sem custo de licença e com soberania dos dados do município.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="docs/documentacao-padrao.pdf">
-              <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-download"></use></svg>
-              Documentação padrão (PDF)
-            </a>
-            <a class="btn btn-ghost" href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">Upstream Portábilis</a>
-          </div>
-          <div class="hero-meta">
-            <span><strong>+100</strong> municípios</span>
-            <span><strong>+2.050</strong> escolas</span>
-            <span><strong>PHP 8.3 · Laravel</strong></span>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="assets/img/tela-ieducar-gestao.jpg" width="1280" height="720" alt="Tela de gestão do i-Educar com indicadores de matrículas e escolas">
-          <span class="hero-chip">
-            <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-chart"></use></svg>
-            Painel da secretaria
-          </span>
+      <div class="wrap">
+        <p class="eyebrow">Software Público Brasileiro · GPL v2</p>
+        <h1>i-Educar</h1>
+        <p class="lede">
+          A gestão da escola pública em base única — matrícula, frequência, Censo e extensões modernas,
+          com soberania dos dados do município.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#album">Ver álbum de telas</a>
+          <a class="btn btn-ghost" href="docs/documentacao-padrao.pdf">Documentação padrão (PDF)</a>
         </div>
       </div>
     </section>
 
-    <section id="software">
+    <section id="sobre">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-school"></use></svg>
-          </span>
-          <h2>O software e suas nuances</h2>
-        </div>
+        <p class="kicker">O software</p>
+        <h2>Nuances funcionais e técnicas</h2>
         <p class="lead">
-          Nascido em Itajaí/SC (2008) e mantido nacionalmente pela Portábilis, o i-Educar
-          concentra a verdade cadastral da rede. A Buriti evolui o ecossistema com plugins,
-          transporte, BI e integrações — sem abandonar o upstream.
+          Nascido em Itajaí/SC (2008) e mantido nacionalmente pela Portábilis. A equipe Buriti,
+          com a LibreCode, evolui plugins e integrações sem abandonar o upstream.
         </p>
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-users"></use></svg></div>
-            <h3>Cadastro único</h3>
-            <p>Pessoa, aluno, matrícula e histórico numa base só — fim da planilha paralela.</p>
+        <div class="split">
+          <article class="card">
+            <h3>Funcional</h3>
+            <ul>
+              <li>Cadastro único do aluno para toda a rede</li>
+              <li>Matrícula, frequência, avaliação e histórico</li>
+              <li>Educacenso / INEP com layout oficial</li>
+              <li>Pré-matrícula, fila e transparência de vagas</li>
+              <li>i-Diário sincronizado com a mesma base</li>
+              <li>Relatórios, atas, boletins e documentos</li>
+            </ul>
           </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
-            <h3>Rotina escolar</h3>
-            <p>Frequência, avaliação flexível, quadro de horários, servidores e documentos oficiais.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-book"></use></svg></div>
-            <h3>Educacenso</h3>
-            <p>Exportação/importação alinhada ao layout do INEP, com validação antes do prazo.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-queue"></use></svg></div>
-            <h3>Fila e vagas</h3>
-            <p>Pré-matrícula digital com critérios públicos e lista de espera transparente.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-shield"></use></svg></div>
-            <h3>LGPD e auditoria</h3>
-            <p>Dados sob controle do município, código GPL v2 auditável e trilha de acesso.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-cogs"></use></svg></div>
-            <h3>Stack moderna</h3>
-            <p>PHP 8.3+, Laravel, PostgreSQL, Redis, filas e multi-tenant por conexão.</p>
+          <article class="card">
+            <h3>Técnico</h3>
+            <ul>
+              <li>PHP 8.3+, Laravel, PostgreSQL, Redis</li>
+              <li>Arquitetura Composer plug-and-play</li>
+              <li>Multi-tenant por conexão municipal</li>
+              <li>Código GPL v2 auditável</li>
+              <li>LGPD e trilha de acesso</li>
+              <li>Integrações: gov.br, GIDE, SGP, BI</li>
+            </ul>
+            <div class="pill-row">
+              <span class="pill">Software Público</span>
+              <span class="pill">Portábilis</span>
+              <span class="pill">+100 municípios</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="fluxos">
+    <section id="album" class="album-section">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-link"></use></svg>
-          </span>
-          <h2>Fluxogramas do ecossistema</h2>
-        </div>
+        <p class="kicker">Álbum do sistema</p>
+        <h2>Telas do ecossistema</h2>
         <p class="lead">
-          O núcleo SGE no centro; diário, fila, Censo, plugins e analytics orbitam a mesma base —
-          sem duplicar aluno nem escola.
+          Clique em qualquer tela para abrir o álbum — com descrição da funcionalidade
+          e os principais benefícios de uso.
         </p>
-        <div class="flow-block">
-          <img src="assets/img/fluxo-ecossistema.svg" width="960" height="420" alt="Fluxograma: i-Educar no centro conectado a i-Diário, pré-matrícula, Educacenso, plugins Buriti, integrações e SERVLITCYS">
-          <div class="flow-caption">Figura 1 — Ecossistema funcional: do cadastro único às soluções satélite.</div>
-        </div>
-        <div class="flow-block" style="margin-top:1rem">
-          <img src="assets/img/fluxo-plug-and-play.svg" width="960" height="260" alt="Fluxo técnico: pacote Composer, plug-and-play, discover, migrate e produção">
-          <div class="flow-caption">Figura 2 — Pipeline técnico plug-and-play: inovar sem fork permanente do core.</div>
-        </div>
-      </div>
-    </section>
 
-    <section id="telas">
-      <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-chart"></use></svg>
-          </span>
-          <h2>Telas do ecossistema</h2>
+        <div class="album-grid" id="album-grid">
+          <button type="button" class="album-item" data-album-index="0">
+            <img src="assets/img/tela-ieducar-gestao.jpg" alt="Painel de gestão do i-Educar" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>Gestão escolar</strong><span>Painel da secretaria</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="1">
+            <img src="assets/img/tela-matricula.jpg" alt="Tela de matrícula" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>Matrícula</strong><span>Cadastro do aluno</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="2">
+            <img src="assets/img/tela-idiario.jpg" alt="Diário de classe" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>i-Diário</strong><span>Chamada e notas</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="3">
+            <img src="assets/img/tela-fila.jpg" alt="Lista de espera da pré-matrícula" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>Pré-matrícula</strong><span>Fila e vagas</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="4">
+            <img src="assets/img/tela-censo.jpg" alt="Validação do Educacenso" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>Educacenso</strong><span>Exportação INEP</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="5">
+            <img src="assets/img/tela-transporte.jpg" alt="Mapa de rotas do transporte" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>Transporte v2</strong><span>Rotas e frota</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="6">
+            <img src="assets/img/tela-relatorios.jpg" alt="Emissão de boletim em PDF" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>Relatórios</strong><span>PDF com QR Code</span></span>
+          </button>
+          <button type="button" class="album-item" data-album-index="7">
+            <img src="assets/img/tela-servlitcys.jpg" alt="Painel SERVLITCYS" loading="lazy" width="1280" height="720">
+            <span class="cap"><strong>SERVLITCYS</strong><span>Analytics municipal</span></span>
+          </button>
         </div>
-        <p class="lead">
-          Recortes visuais da operação: gestão da secretaria, transporte com mapa,
-          relatórios avançados e painel SERVLITCYS.
-        </p>
-        <div class="screens">
-          <figure class="screen-main">
-            <img src="assets/img/tela-ieducar-gestao.jpg" width="1280" height="720" alt="Painel i-Educar com KPIs de alunos, escolas e turmas">
-            <figcaption class="screen-label">
-              <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-school"></use></svg>
-              Gestão escolar · i-Educar
-            </figcaption>
-          </figure>
-          <div class="screen-side">
-            <figure>
-              <img src="assets/img/tela-transporte.jpg" width="1280" height="720" alt="Módulo de transporte escolar com mapa de rotas">
-              <figcaption class="screen-label">
-                <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-bus"></use></svg>
-                Transporte v2
-              </figcaption>
-            </figure>
-            <figure>
-              <img src="assets/img/tela-relatorios.jpg" width="1280" height="720" alt="Emissão de boletim escolar em PDF com QR Code">
-              <figcaption class="screen-label">
-                <svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg>
-                Advanced Reports
-              </figcaption>
-            </figure>
-          </div>
-        </div>
+        <p class="album-hint">Use as setas do teclado no álbum · Esc para fechar</p>
       </div>
     </section>
 
     <section id="tecnologia">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"></use></svg>
-          </span>
-          <h2>Inovação e tecnologia</h2>
+        <p class="kicker">Inovação</p>
+        <h2>Tecnologia que sustenta a rede</h2>
+        <p class="lead">Extensões satélite e integrações federais sobre o mesmo cadastro único.</p>
+        <div class="tech-strip">
+          <article>
+            <strong>Plug-and-play</strong>
+            <p>Pacotes Composer sem fork permanente do core.</p>
+          </article>
+          <article>
+            <strong>gov.br</strong>
+            <p>Login OpenID Connect na autenticação do SGE.</p>
+          </article>
+          <article>
+            <strong>Observabilidade</strong>
+            <p>Laravel Pulse para filas, queries e saúde.</p>
+          </article>
+          <article>
+            <strong>Inteligência</strong>
+            <p>SERVLITCYS cruza i-Educar, FUNDEB, Censo e SAEB.</p>
+          </article>
         </div>
-        <p class="lead">Pacotes satélite, identidade federal, biometria e inteligência territorial sobre o mesmo SGE.</p>
-        <div class="feature-grid">
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-puzzle"></use></svg></div>
-            <h3>Extensão sem lock-in</h3>
-            <p>Composer plug-and-play: evoluir módulos sem abandonar o upstream Portábilis.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
-            <h3>Relatórios sem Java</h3>
-            <p>PDF/Excel no dia a dia, menus temáticos e validação pública por QR Code.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-bus"></use></svg></div>
-            <h3>Transporte escolar v2</h3>
-            <p>Rotas, mapa, portal da família, ocupação por turno, viagens e conformidade.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-id"></use></svg></div>
-            <h3>Login gov.br</h3>
-            <p>OpenID Connect na autenticação do i-Educar, configurável pela interface.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-pulse"></use></svg></div>
-            <h3>Observabilidade</h3>
-            <p>Laravel Pulse empacotado: filas, queries, exceções e saúde da instalação.</p>
-          </article>
-          <article class="feature">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-map"></use></svg></div>
-            <h3>Inteligência municipal</h3>
-            <p>SERVLITCYS cruza i-Educar com FUNDEB, Censo, SAEB e mapa Horizonte.</p>
-          </article>
+
+        <div class="flow-block" style="margin-top:1.5rem">
+          <img src="assets/img/fluxo-ecossistema.svg" width="960" height="420" alt="Fluxograma do ecossistema i-Educar">
+          <div class="flow-caption">Ecossistema: núcleo SGE e soluções satélite.</div>
+        </div>
+        <div class="flow-block">
+          <img src="assets/img/fluxo-plug-and-play.svg" width="960" height="260" alt="Fluxo técnico plug-and-play">
+          <div class="flow-caption">Pipeline técnico: do pacote à produção.</div>
         </div>
       </div>
     </section>
 
     <section id="portabilis">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-shield"></use></svg>
-          </span>
-          <h2>Mantenedora nacional</h2>
-        </div>
-        <div class="mantenedora">
-          <div>
-            <p class="lead" style="margin-bottom:1rem">
-              A <strong>Portábilis</strong> conduz a evolução do core, revisa contribuições da comunidade
-              e mantém o i-Educar alinhado às redes públicas. Nasceu em 2009 com a tese de sustentar
-              o Software Público de forma aberta e duradoura.
-            </p>
-            <p style="color:var(--muted); margin:0">
-              <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
-              <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">github.com/portabilis/i-educar</a> ·
-              <a href="https://paginas.portabilis.com.br/ajuda/" rel="noopener noreferrer">tutoriais</a>
-            </p>
-            <div class="badge-row">
-              <span class="badge">Software Público Brasileiro</span>
-              <span class="badge">GPL v2</span>
-              <span class="badge">Code for Development · BID</span>
-              <span class="badge">Comunidade + municípios</span>
-            </div>
-          </div>
-          <aside class="panel">
-            <h3>Pacotes oficiais Portábilis</h3>
-            <ul>
-              <li>Educacenso</li>
-              <li>Relatórios (Jasper)</li>
-              <li>Transporte escolar</li>
-              <li>Pré-matrícula digital</li>
-              <li>Biblioteca</li>
-            </ul>
-            <p style="margin:.9rem 0 0; font-size:.92rem">
-              A organização GitHub <strong>i-Educar</strong> é independente e colabora de forma
-              compatível — sem substituir o papel da Portábilis.
-            </p>
-          </aside>
+        <p class="kicker">Mantenedora nacional</p>
+        <h2>Portábilis</h2>
+        <p class="lead">
+          Conduz a evolução do core, revisa contribuições e mantém o i-Educar alinhado às redes públicas.
+          Referências:
+          <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
+          <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">GitHub upstream</a>.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Software Público Brasileiro</span>
+          <span class="pill">GPL v2</span>
+          <span class="pill">Code for Development · BID</span>
+          <span class="pill">Educacenso · Relatórios · Transporte · Pré-matrícula</span>
         </div>
       </div>
     </section>
 
     <section id="documentacao">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-book"></use></svg>
-          </span>
-          <h2>Documentação padrão</h2>
-        </div>
-        <p class="lead">PDFs de referência para implantação, visão do ecossistema e apresentação gerencial.</p>
+        <p class="kicker">Materiais</p>
+        <h2>Documentação padrão</h2>
+        <p class="lead">PDFs de referência para implantação e apresentação gerencial.</p>
         <div class="docs-row">
           <article class="doc-card">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-download"></use></svg></div>
             <h3>Documentação padrão</h3>
-            <p>i-Educar + i-Diário + integrações para redes municipais.</p>
+            <p>i-Educar + i-Diário + integrações.</p>
             <a class="btn btn-ink" href="docs/documentacao-padrao.pdf">Baixar PDF</a>
           </article>
           <article class="doc-card">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-cogs"></use></svg></div>
-            <h3>Implantação e consultoria</h3>
-            <p>Roteiro completo de implantação do ecossistema.</p>
+            <h3>Implantação</h3>
+            <p>Roteiro de consultoria e implantação.</p>
             <a class="btn btn-outline" href="docs/implantacao-consultoria.pdf">Baixar PDF</a>
           </article>
           <article class="doc-card">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-chart"></use></svg></div>
             <h3>Apresentação gerencial</h3>
-            <p>Panorama para secretarias: módulos, BI e formação.</p>
+            <p>Panorama para secretarias e gestores.</p>
             <a class="btn btn-outline" href="docs/apresentacao-gestao-educacional.pdf">Baixar PDF</a>
-          </article>
-        </div>
-        <p style="margin:1.15rem 0 0; color:var(--muted); font-size:.92rem">
-          Também:
-          <a href="docs/documentacao-tecnica-implantacao.md">guia técnico dos pacotes (Markdown)</a> ·
-          <a href="https://ieducar.org/primeiros-passos/" rel="noopener noreferrer">ieducar.org/primeiros-passos</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="conectados">
-      <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-link"></use></svg>
-          </span>
-          <h2>Sistemas conectados</h2>
-        </div>
-        <p class="lead">O SGE ganha valor quando diário, censo, BI e políticas federais compartilham o mesmo aluno.</p>
-        <div class="connected">
-          <article>
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
-            <h3>i-Diário</h3>
-            <p>Diário de classe, chamada, notas e planejamento do professor.</p>
-          </article>
-          <article>
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-book"></use></svg></div>
-            <h3>Educacenso / INEP</h3>
-            <p>Layouts oficiais de matrícula inicial e identificação única.</p>
-          </article>
-          <article>
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-queue"></use></svg></div>
-            <h3>Pré-matrícula</h3>
-            <p>Filas, vagas e transparência no acesso à escola pública.</p>
-          </article>
-          <article>
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-face"></use></svg></div>
-            <h3>gov.br · GIDE · SGP</h3>
-            <p>Identidade federal, biometria facial e Gestão Presente (MEC).</p>
           </article>
         </div>
       </div>
@@ -353,111 +220,54 @@
 
     <section id="plugins">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-puzzle"></use></svg>
-          </span>
-          <h2>Catálogo de plugins Buriti</h2>
-        </div>
-        <p class="lead">
-          Pacotes plug-and-play para i-Educar 2.10–2.12, mantidos pela equipe Buriti / Serventec.
-        </p>
-        <div class="catalog">
+        <p class="kicker">Buriti / Serventec</p>
+        <h2>Catálogo de plugins</h2>
+        <p class="lead">Pacotes plug-and-play para i-Educar 2.10–2.12.</p>
+        <div class="plugin-grid">
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
-            <div>
-              <span class="tag">Relatórios</span>
-              <h3><a href="https://github.com/JaderGabriel/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports</a></h3>
-              <p>PDF/Excel sem Java no dia a dia, menus temáticos e QR Code. Espelho: <a href="https://github.com/i-Educar/i-educar-advreport-package" rel="noopener noreferrer">i-Educar/advreport</a>.</p>
-            </div>
+            <span class="tag">Relatórios</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports</a></h3>
+            <p>PDF/Excel sem Java, QR Code e menus temáticos.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-chart"></use></svg></div>
-            <div>
-              <span class="tag">BI</span>
-              <h3><a href="https://github.com/JaderGabriel/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI</a></h3>
-              <p>Dashboards e relatórios analíticos dentro do i-Educar.</p>
-            </div>
+            <span class="tag">BI</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI</a></h3>
+            <p>Dashboards analíticos dentro do i-Educar.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-bus"></use></svg></div>
-            <div>
-              <span class="tag">Transporte</span>
-              <h3>Transporte Escolar v2</h3>
-              <p>Rotas, mapa, frota, portal da família, solicitações, viagens e gastos.</p>
-            </div>
+            <span class="tag">Transporte</span>
+            <h3>Transporte Escolar v2</h3>
+            <p>Rotas, mapa, portal da família, viagens e gastos.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-book"></use></svg></div>
-            <div>
-              <span class="tag">Censo</span>
-              <h3><a href="https://github.com/JaderGabriel/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3>
-              <p>Importa TXT do INEP e sincroniza códigos/situação de matrícula.</p>
-            </div>
+            <span class="tag">Censo</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3>
+            <p>Importação TXT do INEP para sincronizar matrículas.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-queue"></use></svg></div>
-            <div>
-              <span class="tag">Fila</span>
-              <h3><a href="https://github.com/JaderGabriel/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula Digital</a></h3>
-              <p>Vagas e listas de espera integradas ao SGE, com fluxos municipais.</p>
-            </div>
+            <span class="tag">Fila</span>
+            <h3><a href="https://github.com/JaderGabriel/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula</a></h3>
+            <p>Vagas e listas de espera integradas ao SGE.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-id"></use></svg></div>
-            <div>
-              <span class="tag">Identidade</span>
-              <h3>Login gov.br</h3>
-              <p>OpenID Connect na tela de login, configurável pela administração.</p>
-            </div>
+            <span class="tag">Identidade</span>
+            <h3>Login gov.br</h3>
+            <p>OpenID Connect na tela de autenticação.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-face"></use></svg></div>
-            <div>
-              <span class="tag">Frequência</span>
-              <h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE</a></h3>
-              <p>Biometria facial, APIs de presença e relatório FREQ GIDE.</p>
-            </div>
+            <span class="tag">Frequência</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE</a></h3>
+            <p>Biometria facial e APIs de presença.</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-ticket"></use></svg></div>
-            <div>
-              <span class="tag">Operação</span>
-              <h3>Chamados</h3>
-              <p>Helpdesk com protocolo, setores, prioridades, notificações e KPIs.</p>
-            </div>
+            <span class="tag">Operação</span>
+            <h3>Chamados · Pulse · SGP</h3>
+            <p>Helpdesk, monitoramento e Gestão Presente (MEC).</p>
           </article>
           <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-shield"></use></svg></div>
-            <div>
-              <span class="tag">MEC</span>
-              <h3>Gestão Presente</h3>
-              <p>Exportação e consistência para o SGP (planilhas / API CMDEB).</p>
-            </div>
-          </article>
-          <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-pulse"></use></svg></div>
-            <div>
-              <span class="tag">Ops</span>
-              <h3><a href="https://github.com/JaderGabriel/i-educar-pulse-package" rel="noopener noreferrer">Pulse</a></h3>
-              <p>Monitoramento Laravel Pulse: filas, queries e exceções.</p>
-            </div>
-          </article>
-          <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"></use></svg></div>
-            <div>
-              <span class="tag">UX</span>
-              <h3>Hamburger / tema</h3>
-              <p>Menu lateral recolhível e tema claro/escuro/sistema.</p>
-            </div>
-          </article>
-          <article class="plugin">
-            <div class="ico-wrap" aria-hidden="true"><svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-cogs"></use></svg></div>
-            <div>
-              <span class="tag">Setup</span>
-              <h3><a href="https://github.com/JaderGabriel/i-educar-setup-municipio-base-package" rel="noopener noreferrer">Setup município</a></h3>
-              <p>BNCC, calendário, perfis, turmas e tipos de boletim para acelerar implantação.</p>
-            </div>
+            <span class="tag">Setup</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-setup-municipio-base-package" rel="noopener noreferrer">Setup município</a></h3>
+            <p>BNCC, calendário, perfis e tipos de boletim.</p>
           </article>
         </div>
       </div>
@@ -465,38 +275,29 @@
 
     <section id="servlitcys">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-map"></use></svg>
-          </span>
-          <h2>SERVLITCYS</h2>
-        </div>
-        <p class="lead">
-          Plataforma Laravel de dados educacionais por município: consultoria, RX, Horizonte GIS
-          e ligação direta às bases i-Educar.
-        </p>
+        <p class="kicker">Analytics</p>
+        <h2>SERVLITCYS</h2>
+        <p class="lead">Dados educacionais por município com ligação direta às bases i-Educar.</p>
         <div class="servlit">
           <div class="servlit-copy">
-            <h3>Consultoria + território</h3>
+            <h3>Consultoria + Horizonte</h3>
             <p>
-              Integra i-Educar com FUNDEB, Censo INEP e SAEB. Painéis de matrículas, inclusão,
-              desempenho e finanças; visão RX de cadastro/Censo; mapa Horizonte para priorizar ações.
+              Painéis de matrículas, inclusão, desempenho e finanças; RX de cadastro/Censo;
+              mapa GIS com FUNDEB, Censo e SAEB.
             </p>
             <ul>
-              <li><strong>Clio</strong> — coletas Educacenso (1ª etapa)</li>
-              <li><strong>Projeção</strong> — leitura prospectiva de FUNDEB</li>
-              <li><strong>Horizonte</strong> — GIS com scores por município/UF</li>
+              <li>Clio — coletas Educacenso</li>
+              <li>Projeção — FUNDEB prospectivo</li>
+              <li>Horizonte — oportunidade territorial</li>
             </ul>
             <p style="margin-top:1rem">
-              Código:
-              <a href="https://github.com/JaderGabriel/serventec-servlitcys" rel="noopener noreferrer">JaderGabriel/serventec-servlitcys</a><br>
-              Ambiente:
-              <a href="https://analise.serventecassessoria.com.br" rel="noopener noreferrer">analise.serventecassessoria.com.br</a>
+              <a href="https://github.com/JaderGabriel/serventec-servlitcys" rel="noopener noreferrer">Repositório</a>
+              ·
+              <a href="https://analise.serventecassessoria.com.br" rel="noopener noreferrer">Ambiente</a>
             </p>
           </div>
           <figure class="servlit-visual">
-            <img src="assets/img/tela-servlitcys.jpg" width="1280" height="720" alt="Painel SERVLITCYS com mapa do Brasil e indicadores municipais">
-            <figcaption class="screen-label">SERVLITCYS · Horizonte</figcaption>
+            <img src="assets/img/tela-servlitcys.jpg" width="1280" height="720" alt="Painel SERVLITCYS com mapa do Brasil">
           </figure>
         </div>
       </div>
@@ -504,33 +305,20 @@
 
     <section id="equipe">
       <div class="wrap reveal">
-        <div class="section-head">
-          <span class="section-ico" aria-hidden="true">
-            <svg class="icon-lg" viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-users"></use></svg>
-          </span>
-          <h2>Quem mantém esta página</h2>
-        </div>
-        <p class="lead">
-          Organização e site <strong>i-educar.github.io</strong> sob curadoria da equipe
-          <strong>Buriti</strong>, em cooperação com a <strong>LibreCode</strong>.
-        </p>
+        <p class="kicker">Curadoria</p>
+        <h2>Buriti e LibreCode</h2>
+        <p class="lead">Esta página e a organização GitHub i-Educar são cuidadas pela Buriti, em cooperação com a LibreCode.</p>
         <div class="team">
           <article>
             <img class="team-logo" src="assets/img/logo-buriti.png" width="120" height="114" alt="Logo Buriti">
             <h3>Buriti</h3>
-            <p>
-              Núcleo técnico dos plugins, transporte v2, relatórios avançados, integrações municipais
-              e curadoria desta página na organização GitHub i-Educar.
-            </p>
+            <p>Plugins, transporte v2, relatórios avançados e curadoria desta página.</p>
             <a class="btn btn-outline" href="https://github.com/i-Educar" rel="noopener noreferrer">Organização i-Educar</a>
           </article>
           <article>
             <img class="team-logo" src="assets/img/librecode.png" width="180" height="110" alt="Logo LibreCode">
             <h3>LibreCode</h3>
-            <p>
-              Cooperativa de software livre — hospedagem soberana, suporte e customização,
-              com i-Educar no portfólio de soluções livres.
-            </p>
+            <p>Cooperativa de software livre — hospedagem soberana, suporte e customização.</p>
             <a class="btn btn-ink" href="https://librecode.coop" rel="noopener noreferrer">librecode.coop</a>
           </article>
         </div>
@@ -541,9 +329,8 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <strong>i-Educar</strong> · iniciativas compatíveis com o upstream Portábilis.<br>
-        Licença do software: GNU GPL v2. Página: Buriti ·
-        <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>.
+        <strong>i-Educar</strong> · compatível com o upstream Portábilis.<br>
+        GPL v2 · página Buriti · <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>
       </div>
       <div>
         <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">Core</a> ·
@@ -552,6 +339,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- Álbum / lightbox -->
+  <div class="lightbox" id="lightbox" hidden aria-hidden="true">
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lb-title">
+      <div class="lightbox-media">
+        <button type="button" class="lightbox-close" id="lb-close" aria-label="Fechar álbum">×</button>
+        <img id="lb-image" src="" alt="">
+      </div>
+      <div class="lightbox-side">
+        <p class="index" id="lb-index">1 / 8</p>
+        <h3 id="lb-title">Título</h3>
+        <p class="desc" id="lb-desc"></p>
+        <h4>Vantagens de uso</h4>
+        <ul class="pros" id="lb-pros"></ul>
+        <div class="lightbox-nav">
+          <button type="button" class="btn btn-outline lightbox-prev" id="lb-prev">Anterior</button>
+          <button type="button" class="btn btn-ink lightbox-next" id="lb-next">Próxima</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/site.js"></script>
 </body>
