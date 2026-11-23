@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>i-Educar — software livre de gestão escolar</title>
+  <meta name="description" content="Página institucional do ecossistema i-Educar: nuances técnicas e funcionais, inovação, plugins Buriti, Portábilis, LibreCode e SERVLITCYS.">
+  <meta property="og:title" content="i-Educar — software livre de gestão escolar">
+  <meta property="og:description" content="Gestão escolar pública, aberta e extensível. Mantido nacionalmente pela Portábilis, com evolução Buriti e LibreCode.">
+  <meta property="og:url" content="https://i-educar.github.io/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://i-educar.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#topo">i-Educar <span>org</span></a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#software">Software</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#portabilis">Portábilis</a>
+        <a href="#documentacao">Documentação</a>
+        <a href="#plugins">Plugins</a>
+        <a href="#servlitcys">SERVLITCYS</a>
+        <a href="#equipe">Equipe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+    <section class="hero" aria-label="Apresentação">
+      <div class="wrap">
+        <p class="eyebrow">Software Público Brasileiro · GPL v2</p>
+        <h1>i-Educar</h1>
+        <p>
+          A gestão da escola pública, aberta e construída em comunidade —
+          da matrícula ao Censo, com uma base única, extensível por plugins
+          e conectada à inteligência educacional municipal.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="docs/documentacao-padrao.pdf">Baixar documentação padrão (PDF)</a>
+          <a class="btn btn-ghost" href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">Upstream Portábilis</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="software">
+      <div class="wrap reveal">
+        <h2>O software e suas nuances</h2>
+        <p class="lead">
+          O i-Educar nasceu em Itajaí/SC (2008), entrou no Portal do Software Público
+          e hoje é a espinha dorsal de redes municipais em todo o Brasil. Ele centraliza
+          o aluno, a escola e a secretaria numa única verdade cadastral.
+        </p>
+        <div class="split">
+          <div class="panel">
+            <h3>Nuances funcionais</h3>
+            <ul>
+              <li><strong>Cadastro único do aluno</strong> — pessoa, matrícula, turma, histórico e documentos sem duplicar bases.</li>
+              <li><strong>Rotina escolar</strong> — frequência, avaliação flexível (nota, conceito ou descritiva), quadro de horários e servidores.</li>
+              <li><strong>Educacenso / INEP</strong> — exportação e importação alinhadas ao layout oficial do Censo Escolar.</li>
+              <li><strong>Documentação e relatórios</strong> — boletins, históricos, atas, fichas e centenas de modelos operacionais.</li>
+              <li><strong>Fila e pré-matrícula</strong> — gestão de vagas e listas de espera integradas ao SGE.</li>
+              <li><strong>i-Diário</strong> — diário de classe do professor sincronizado com a mesma base.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Nuances técnicas</h3>
+            <ul>
+              <li><strong>Stack moderna</strong> — PHP 8.3+, Laravel, PostgreSQL, Redis, filas e interface web full-web.</li>
+              <li><strong>Arquitetura plug-and-play</strong> — pacotes Composer locais estendem o core sem fork permanente.</li>
+              <li><strong>Multi-tenant</strong> — várias redes/municípios na mesma infraestrutura, com isolamento por conexão.</li>
+              <li><strong>LGPD e auditoria</strong> — dados educacionais sob controle do município, com trilha de acesso.</li>
+              <li><strong>Código auditável</strong> — GPL v2; o histórico da rede permanece do poder público, não do contrato.</li>
+              <li><strong>Integrações</strong> — Educacenso, gov.br, BI, transporte, biometria, Gestão Presente e APIs municipais.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologia">
+      <div class="wrap reveal">
+        <h2>Inovação e tecnologia</h2>
+        <p class="lead">
+          Além do núcleo clássico de secretaria, o ecossistema evolui com pacotes
+          satélite, analytics territorial e experiência moderna para gestores e famílias.
+        </p>
+        <div class="tech-grid">
+          <article class="tech-item">
+            <strong>Extensão sem lock-in</strong>
+            <p>Plugins Composer plug-and-play permitem inovação contínua sem abandonar o upstream da Portábilis.</p>
+          </article>
+          <article class="tech-item">
+            <strong>Relatórios sem Java</strong>
+            <p>Camada avançada de PDF/Excel e validação pública por QR Code, reduzindo dependência de Jasper no dia a dia.</p>
+          </article>
+          <article class="tech-item">
+            <strong>Transporte escolar v2</strong>
+            <p>Rotas com mapa, portal da família, ocupação por turno, viagens, gastos e conformidade DETRAN/CIRETRAN.</p>
+          </article>
+          <article class="tech-item">
+            <strong>Identidade gov.br</strong>
+            <p>Login OpenID Connect no i-Educar, com configuração pela interface e botão nativo na autenticação.</p>
+          </article>
+          <article class="tech-item">
+            <strong>Observabilidade</strong>
+            <p>Laravel Pulse empacotado para monitorar filas, consultas, exceções e saúde operacional da instalação.</p>
+          </article>
+          <article class="tech-item">
+            <strong>Inteligência municipal</strong>
+            <p>SERVLITCYS cruza i-Educar com FUNDEB, Censo, SAEB e mapa Horizonte para decisão territorial.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portabilis">
+      <div class="wrap reveal">
+        <h2>Mantenedora nacional</h2>
+        <div class="mantenedora">
+          <div>
+            <p class="lead" style="margin-bottom:1rem">
+              A <strong>Portábilis</strong> é a mantenedora nacional do i-Educar: conduz a evolução do core,
+              revisa contribuições da comunidade e mantém o software alinhado às exigências das redes públicas.
+              Nasceu em 2009 com a tese de sustentar o projeto de forma aberta e duradoura.
+            </p>
+            <p style="color:var(--muted); margin-top:0">
+              Referências oficiais:
+              <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
+              <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">github.com/portabilis/i-educar</a> ·
+              <a href="https://paginas.portabilis.com.br/ajuda/" rel="noopener noreferrer">tutoriais Portábilis</a>.
+            </p>
+            <div class="badge-row">
+              <span class="badge">Software Público Brasileiro</span>
+              <span class="badge">GPL v2</span>
+              <span class="badge">Code for Development · BID</span>
+              <span class="badge">Comunidade + municípios</span>
+            </div>
+          </div>
+          <aside class="panel">
+            <h3>Pacotes oficiais Portábilis</h3>
+            <ul>
+              <li>Educacenso</li>
+              <li>Relatórios (Jasper)</li>
+              <li>Transporte escolar</li>
+              <li>Pré-matrícula digital</li>
+              <li>Biblioteca</li>
+            </ul>
+            <p style="margin:.9rem 0 0; font-size:.92rem">
+              Esta organização GitHub (<strong>i-Educar</strong>) é independente e colabora de forma
+              compatível com o upstream — sem substituir o papel da Portábilis.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="documentacao">
+      <div class="wrap reveal">
+        <h2>Documentação padrão</h2>
+        <p class="lead">
+          Materiais de referência para implantação, visão do ecossistema e apresentação gerencial.
+          O PDF principal descreve i-Educar, i-Diário e integrações.
+        </p>
+        <div class="docs-row">
+          <article class="doc-card">
+            <h3>Documentação padrão</h3>
+            <p>Visão de i-Educar + i-Diário + integrações para redes municipais.</p>
+            <a class="btn btn-ink" href="docs/documentacao-padrao.pdf">Baixar PDF</a>
+          </article>
+          <article class="doc-card">
+            <h3>Implantação e consultoria</h3>
+            <p>Roteiro de implantação e consultoria completa do ecossistema.</p>
+            <a class="btn btn-outline" href="docs/implantacao-consultoria.pdf">Baixar PDF</a>
+          </article>
+          <article class="doc-card">
+            <h3>Apresentação gerencial</h3>
+            <p>Panorama para secretarias e gestores: módulos, BI e formação.</p>
+            <a class="btn btn-outline" href="docs/apresentacao-gestao-educacional.pdf">Baixar PDF</a>
+          </article>
+        </div>
+        <p style="margin:1.2rem 0 0; color:var(--muted); font-size:.92rem">
+          Também disponível a
+          <a href="docs/documentacao-tecnica-implantacao.md">documentação técnica de implantação dos pacotes</a>
+          (Markdown) e a documentação oficial em
+          <a href="https://ieducar.org/primeiros-passos/" rel="noopener noreferrer">ieducar.org/primeiros-passos</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="conectados">
+      <div class="wrap reveal">
+        <h2>Sistemas e módulos conectados</h2>
+        <p class="lead">O SGE não opera isolado: a rede ganha valor quando diário, censo, BI e políticas federais conversam.</p>
+        <div class="connected">
+          <article>
+            <h3>i-Diário</h3>
+            <p>Diário de classe, chamada, notas e planejamento do professor.</p>
+          </article>
+          <article>
+            <h3>Educacenso / INEP</h3>
+            <p>Layouts oficiais de matrícula inicial e identificação única.</p>
+          </article>
+          <article>
+            <h3>Pré-matrícula</h3>
+            <p>Filas, vagas e transparência no acesso à escola pública.</p>
+          </article>
+          <article>
+            <h3>gov.br · GIDE · SGP</h3>
+            <p>Identidade federal, biometria facial e Gestão Presente (MEC).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="plugins">
+      <div class="wrap reveal">
+        <h2>Catálogo de plugins Buriti / Serventec</h2>
+        <p class="lead">
+          Pacotes desenvolvidos e mantidos pela equipe Buriti (Jader Gabriel e ecossistema Serventec),
+          pensados para instalar via Composer plug-and-play sobre o i-Educar 2.10–2.12.
+        </p>
+        <div class="catalog">
+          <article class="plugin">
+            <span class="tag">Relatórios</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports</a></h3>
+            <p>Relatórios e documentos em PDF/Excel sem Java no consumo diário, menus temáticos e validação pública por QR Code. Espelho na org: <a href="https://github.com/i-Educar/i-educar-advreport-package" rel="noopener noreferrer">i-Educar/i-educar-advreport-package</a>.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">BI</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI Package</a></h3>
+            <p>Dashboards e relatórios analíticos dentro do i-Educar, com gráficos e exportação para apoio à gestão.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Transporte</span>
+            <h3>Transporte Escolar v2</h3>
+            <p>Operação completa de rotas, mapa, frota, portal da família, solicitações, viagens, gastos e conformidade — independente do pacote legado Portábilis.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Censo</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3>
+            <p>Importação de TXT do INEP para sincronizar códigos e situação de matrícula com o cadastro já existente.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Fila</span>
+            <h3><a href="https://github.com/JaderGabriel/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula Digital</a></h3>
+            <p>Gestão de vagas e listas de espera integrada ao i-Educar, com evolução para fluxos municipais.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Identidade</span>
+            <h3>Login gov.br</h3>
+            <p>Autenticação OpenID Connect na tela de login do i-Educar, configurável pela interface administrativa.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Frequência</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE facial</a></h3>
+            <p>Integração biométrica com GIDE: ficha facial, APIs de presença, exclusão segura ao encerrar matrícula e relatório FREQ.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Operação</span>
+            <h3>Chamados</h3>
+            <p>Helpdesk interno com protocolo, setores, prioridades, SLA operacional, notificações e KPIs.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">MEC</span>
+            <h3>Gestão Presente</h3>
+            <p>Exportação e consistência de dados para o Sistema Gestão Presente (planilhas oficiais / API CMDEB).</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Ops</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-pulse-package" rel="noopener noreferrer">Pulse</a></h3>
+            <p>Monitoramento avançado com Laravel Pulse: filas, queries, exceções e saúde da aplicação.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">UX</span>
+            <h3>Hamburger / tema</h3>
+            <p>Menu lateral recolhível e alternância de tema claro/escuro/sistema, plug-and-play.</p>
+          </article>
+          <article class="plugin">
+            <span class="tag">Setup</span>
+            <h3><a href="https://github.com/JaderGabriel/i-educar-setup-municipio-base-package" rel="noopener noreferrer">Setup município base</a></h3>
+            <p>Fluxo BNCC, calendário, perfis, turmas, auditoria e tipos de boletim para acelerar implantação municipal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="servlitcys">
+      <div class="wrap reveal">
+        <h2>SERVLITCYS</h2>
+        <p class="lead">
+          Plataforma web Laravel para dados educacionais por município: painéis de consultoria,
+          RX operacional, mapa Horizonte e ligação direta às bases i-Educar (MySQL ou PostgreSQL).
+        </p>
+        <div class="servlit">
+          <div class="panel">
+            <h3>O que faz</h3>
+            <p>
+              Integra i-Educar com importações públicas (FUNDEB, Censo INEP, SAEB) e inteligência territorial.
+              Oferece consultoria analítica (matrículas, inclusão, desempenho, finanças), visão RX de cadastro/Censo
+              e o mapa GIS Horizonte para priorizar ações e expansão.
+            </p>
+            <p style="margin-top:1rem">
+              Código:
+              <a href="https://github.com/JaderGabriel/serventec-servlitcys" rel="noopener noreferrer">github.com/JaderGabriel/serventec-servlitcys</a><br>
+              Ambiente:
+              <a href="https://analise.serventecassessoria.com.br" rel="noopener noreferrer">analise.serventecassessoria.com.br</a>
+            </p>
+          </div>
+          <div class="panel" style="background:#fff;color:var(--text)">
+            <h3 style="color:var(--ink)">Módulos em destaque</h3>
+            <ul>
+              <li><strong>Consultoria</strong> — resumo, cadastro, pedagógico, censo e finanças.</li>
+              <li><strong>Horizonte</strong> — GIS com scores de oportunidade por município/UF.</li>
+              <li><strong>Clio</strong> — coletas Educacenso (1ª etapa).</li>
+              <li><strong>Projeção</strong> — leitura prospectiva de FUNDEB.</li>
+              <li><strong>RX</strong> — meta de cadastro e escolas exportadas/pendentes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipe">
+      <div class="wrap reveal">
+        <h2>Quem mantém esta página</h2>
+        <p class="lead">
+          Esta organização e o site <strong>i-educar.github.io</strong> são cuidados pela equipe
+          <strong>Buriti</strong>, em cooperação com a <strong>LibreCode</strong>.
+        </p>
+        <div class="team">
+          <article>
+            <h3>Buriti</h3>
+            <p>
+              Núcleo técnico responsável por plugins, transporte v2, relatórios avançados,
+              integrações municipais e pela curadoria desta página institucional na organização GitHub i-Educar.
+            </p>
+            <a class="btn btn-outline" href="https://github.com/i-Educar" rel="noopener noreferrer">Organização i-Educar</a>
+          </article>
+          <article>
+            <h3>LibreCode</h3>
+            <p>
+              Cooperativa de software livre — hospedagem soberana, suporte especializado e
+              customização sob demanda, com i-Educar no portfólio de soluções livres.
+            </p>
+            <a class="btn btn-ink" href="https://librecode.coop" rel="noopener noreferrer">librecode.coop</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <strong>i-Educar</strong> · iniciativas independentes compatíveis com o upstream Portábilis.<br>
+        Licença do software: GNU GPL v2. Conteúdo desta página: equipe Buriti ·
+        <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>.
+      </div>
+      <div>
+        <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">Core</a> ·
+        <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
+        <a href="docs/documentacao-padrao.pdf">PDF</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
