@@ -22,12 +22,13 @@
     },
     {
       src: "assets/img/tela-idiario.jpg",
-      title: "i-Diário · chamada e notas",
-      desc: "Diário de classe do professor sincronizado com o i-Educar: frequência, avaliações e planejamento.",
+      title: "i-Diário · microssistema conectado ao i-Educar",
+      desc: "Microssistema do professor acoplado ao SGE: diário de classe, chamada, notas e planejamento na mesma base de alunos e turmas do i-Educar — sem cadastro paralelo.",
       pros: [
-        "Lançamento na sala, com reflexo imediato na secretaria",
-        "Reduz papel e atraso na consolidação de faltas/notas",
-        "Apoia busca ativa e acompanhamento pedagógico",
+        "Produto próprio (web/app) conectado ao núcleo, não uma tela isolada",
+        "Lançamento na sala com reflexo imediato na secretaria",
+        "Reduz papel e atraso na consolidação de faltas e notas",
+        "Apoia busca ativa, boletim e acompanhamento pedagógico",
       ],
     },
     {
