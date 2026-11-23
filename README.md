@@ -1,13 +1,7 @@
 # i-educar.github.io
 
-Site institucional da organização [i-Educar](https://github.com/i-Educar): software livre de gestão escolar, documentação, plugins Buriti e referências à Portábilis (mantenedora nacional) e à [LibreCode](https://librecode.coop).
+Página comercial do ecossistema **i-Educar** (organização [i-Educar](https://github.com/i-Educar)).
 
-**Publicação:** https://i-educar.github.io/
+**Site:** https://i-educar.github.io/
 
-## Conteúdo principal
-
-- `index.html` — página profissional
-- `docs/documentacao-padrao.pdf` — documentação padrão (i-Educar + i-Diário + integrações)
-- `docs/` — demais PDFs e guia técnico de implantação
-
-Upstream do software: https://github.com/portabilis/i-educar
+Inclui fatos do ecossistema, i-Diário (microssistema), Moodle híbrido, álbum de telas, área de testes (ainda não liberada), plugins Buriti, Portábilis e LibreCode.
