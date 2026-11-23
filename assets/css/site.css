@@ -875,19 +875,104 @@ body.album-open { overflow: hidden; }
 .cta-final .lead { color: rgba(244,255,251,.72); }
 
 .site-footer {
-  padding: 2.5rem 0 3rem;
-  background: var(--ink);
-  color: rgba(244,255,251,.65);
-  font-size: .9rem;
+  padding: 1.6rem 0 1.85rem;
+  background: #f7faf9;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .86rem;
 }
 .site-footer .wrap {
+  display: grid;
+  gap: .85rem 1.5rem;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "brand orgs"
+    "note note";
+}
+.footer-brand {
+  grid-area: brand;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: baseline;
+  gap: .45rem .7rem;
+  min-width: 0;
 }
-.site-footer strong { color: #fff; }
-.site-footer a { color: var(--mint-2); }
+.footer-name {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.footer-meta {
+  color: var(--muted);
+  font-size: .8rem;
+}
+.footer-orgs {
+  grid-area: orgs;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: .55rem .15rem;
+}
+.footer-org {
+  display: flex;
+  flex-direction: column;
+  gap: .12rem;
+  padding: .35rem .7rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  transition: background .2s ease;
+}
+.footer-org:hover {
+  background: rgba(14, 127, 108, 0.06);
+  color: inherit;
+}
+.footer-org-role {
+  font-size: .62rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--mint);
+}
+.footer-org-name {
+  font-family: "Sora", sans-serif;
+  font-size: .88rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--ink-2);
+}
+.footer-sep {
+  width: 1px;
+  align-self: stretch;
+  margin: .35rem 0;
+  background: var(--line-strong);
+}
+.footer-note {
+  grid-area: note;
+  margin: 0;
+  padding-top: .15rem;
+  font-size: .78rem;
+  line-height: 1.45;
+  color: #6a7f84;
+  max-width: 52rem;
+}
+@media (max-width: 860px) {
+  .site-footer .wrap {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "orgs"
+      "note";
+  }
+  .footer-orgs {
+    justify-content: flex-start;
+  }
+  .footer-sep { display: none; }
+}
 
 .reveal {
   opacity: 0;
