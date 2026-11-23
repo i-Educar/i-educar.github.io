@@ -195,53 +195,25 @@
     a.addEventListener("click", (e) => e.preventDefault());
   });
 
-  // Atualiza a legenda do mapa de escolha
-  const choiceHint = document.getElementById("choice-hint");
-  const choiceLinks = [...document.querySelectorAll(".choice-map a[href^='#']")];
-  const hints = Object.fromEntries(
-    choiceLinks.map((a) => [a.getAttribute("href").slice(1), a.getAttribute("title") || ""])
-  );
-  const setChoiceHint = (id) => {
-    if (!choiceHint || !hints[id]) return;
-    choiceHint.textContent = hints[id];
-    choiceLinks.forEach((a) => {
-      const on = a.getAttribute("href") === `#${id}`;
-      a.classList.toggle("is-here", on);
-      if (on) a.setAttribute("aria-current", "true");
-      else a.removeAttribute("aria-current");
-    });
-  };
-  choiceLinks.forEach((a) => {
-    a.addEventListener("mouseenter", () => {
-      const t = a.getAttribute("title");
-      if (choiceHint && t) choiceHint.textContent = t;
-    });
-    a.addEventListener("focus", () => {
-      const t = a.getAttribute("title");
-      if (choiceHint && t) choiceHint.textContent = t;
-    });
-  });
-  document.querySelector(".choice-map")?.addEventListener("mouseleave", () => {
-    const active = document.querySelector(".nav a.is-active, .choice-map a.is-here");
-    const id = active?.getAttribute("href")?.slice(1);
-    if (id) setChoiceHint(id);
-  });
-
-  // Destaca no menu o tema da seção visível (mapa de escolha)
-  const navLinks = [...document.querySelectorAll(".nav a[href^='#']")];
+  // Fluxo de implantação no cabeçalho fixo
+  const navLinks = [...document.querySelectorAll(".nav-flow-list a[href^='#']")];
   const sectionIds = navLinks.map((a) => a.getAttribute("href").slice(1));
   const sections = sectionIds
     .map((id) => document.getElementById(id))
     .filter(Boolean);
 
   const setActiveNav = (id) => {
-    navLinks.forEach((a) => {
-      const on = a.getAttribute("href") === `#${id}`;
+    const activeIndex = sectionIds.indexOf(id);
+    navLinks.forEach((a, index) => {
+      const on = index === activeIndex;
+      const done = activeIndex > -1 && index < activeIndex;
       a.classList.toggle("is-active", on);
+      a.classList.toggle("is-done", done);
+      a.parentElement?.classList.toggle("is-active-step", on);
+      a.parentElement?.classList.toggle("is-done-step", done);
       if (on) a.setAttribute("aria-current", "true");
       else a.removeAttribute("aria-current");
     });
-    if (typeof setChoiceHint === "function") setChoiceHint(id);
   };
 
   if (sections.length && "IntersectionObserver" in window) {
