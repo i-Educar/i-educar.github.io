@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Fluxo técnico plug-and-play</title>
+  <desc id="d2">Pacote Composer, discover, migrate e menu no i-Educar sem alterar o core.</desc>
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f7a66"/>
+    </marker>
+  </defs>
+  <rect width="960" height="260" rx="24" fill="#062a2f"/>
+  <text x="48" y="48" fill="#7dcfb6" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">ARQUITETURA TÉCNICA</text>
+  <text x="48" y="78" fill="#ffffff" font-family="Syne, Arial, sans-serif" font-size="22" font-weight="700">Do pacote à produção, sem fork do core</text>
+
+  <g font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="700">
+    <g stroke="#3db89a" stroke-width="2" fill="none" marker-end="url(#a2)">
+      <path d="M190 160 H250"/>
+      <path d="M390 160 H450"/>
+      <path d="M590 160 H650"/>
+      <path d="M790 160 H850"/>
+    </g>
+    <g>
+      <rect x="40" y="130" width="150" height="60" rx="14" fill="#0d3f46" stroke="#3db89a"/>
+      <text x="115" y="155" text-anchor="middle" fill="#e6c36a">1 · Pacote</text>
+      <text x="115" y="175" text-anchor="middle" fill="#d7e8e4" font-weight="500" font-size="11">packages/buriti</text>
+    </g>
+    <g>
+      <rect x="250" y="130" width="140" height="60" rx="14" fill="#0d3f46" stroke="#3db89a"/>
+      <text x="320" y="155" text-anchor="middle" fill="#e6c36a">2 · Composer</text>
+      <text x="320" y="175" text-anchor="middle" fill="#d7e8e4" font-weight="500" font-size="11">plug-and-play</text>
+    </g>
+    <g>
+      <rect x="450" y="130" width="140" height="60" rx="14" fill="#0d3f46" stroke="#3db89a"/>
+      <text x="520" y="155" text-anchor="middle" fill="#e6c36a">3 · Discover</text>
+      <text x="520" y="175" text-anchor="middle" fill="#d7e8e4" font-weight="500" font-size="11">service provider</text>
+    </g>
+    <g>
+      <rect x="650" y="130" width="140" height="60" rx="14" fill="#0d3f46" stroke="#3db89a"/>
+      <text x="720" y="155" text-anchor="middle" fill="#e6c36a">4 · Migrate</text>
+      <text x="720" y="175" text-anchor="middle" fill="#d7e8e4" font-weight="500" font-size="11">menus · tabelas</text>
+    </g>
+    <g>
+      <rect x="850" y="130" width="70" height="60" rx="14" fill="#3db89a"/>
+      <text x="885" y="165" text-anchor="middle" fill="#062a2f">OK</text>
+    </g>
+  </g>
+  <text x="48" y="230" fill="rgba(244,255,251,.7)" font-family="Manrope, Arial, sans-serif" font-size="12">PHP 8.3+ · Laravel · PostgreSQL · Redis · multi-tenant por conexão</text>
+</svg>

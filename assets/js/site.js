@@ -1,6 +1,7 @@
 (() => {
   const nodes = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window)) {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) {
     nodes.forEach((el) => el.classList.add("is-visible"));
     return;
   }
