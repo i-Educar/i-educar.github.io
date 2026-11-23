@@ -3,8 +3,8 @@
     {
       src: "assets/img/tela-ieducar-gestao.jpg",
       url: "painel da secretaria",
-      title: "Painel da secretaria · visão da rede",
-      desc: "Para o gestor: indicadores de alunos, escolas e turmas a partir do cadastro único — sem pedir planilha escola por escola.",
+      title: "Passo da operação 1 · Painel da secretaria",
+      desc: "Ponto de partida da decisão operacional: indicadores da rede a partir do cadastro único — sem pedir planilha escola por escola.",
       pros: [
         "Um número oficial para apresentar ao gabinete e ao conselho",
         "Acompanhamento contínuo da rede, não só no fechamento do mês",
@@ -14,8 +14,8 @@
     {
       src: "assets/img/tela-matricula.jpg",
       url: "matrícula",
-      title: "Matrícula · cadastro oficial do aluno",
-      desc: "Registro completo da pessoa e da matrícula, com vínculo à turma e à situação escolar — o ponto de partida de toda a gestão.",
+      title: "Passo da operação 1 · Matrícula oficial",
+      desc: "Base de toda a cadeia decisória: pessoa e matrícula oficiais alimentam diário, fila, Censo, transporte e documentos.",
       pros: [
         "Histórico do aluno permanece na rede, não em pasta solta",
         "Menos retrabalho em renovação e transferência",
@@ -25,8 +25,8 @@
     {
       src: "assets/img/tela-idiario.jpg",
       url: "i-diario",
-      title: "i-Diário · o professor na mesma base",
-      desc: "Microssistema do professor conectado ao i-Educar: chamada e notas lançadas na sala já alimentam a secretaria.",
+      title: "Passo da operação 2 · i-Diário",
+      desc: "Depois do núcleo: o professor lança na sala e a SME já lê frequência e notas — sem cadastro paralelo.",
       pros: [
         "Acaba a digitação duplicada de frequência e notas",
         "Fecha período com menos atraso",
@@ -36,8 +36,8 @@
     {
       src: "assets/img/tela-fila.jpg",
       url: "pré-matrícula",
-      title: "Pré-matrícula · fila transparente",
-      desc: "Organiza a demanda por vaga com protocolo e status visíveis — menos fila na porta da escola e mais critério na distribuição.",
+      title: "Passo da operação 3 · Pré-matrícula",
+      desc: "Com a base estável, a família entra na fila com critério público — a SME planeja oferta com demanda real.",
       pros: [
         "Transparência para famílias e para a gestão",
         "Apoio às regras de lista de espera pública",
@@ -47,8 +47,8 @@
     {
       src: "assets/img/tela-censo.jpg",
       url: "educacenso",
-      title: "Educacenso · menos correção de última hora",
-      desc: "A secretaria prepara e confere o envio ao INEP usando a base já operada no ano — não uma força-tarefa paralela.",
+      title: "Passo da operação 4 · Educacenso",
+      desc: "O Censo aproveita o cadastro do ano. Na decisão do gestor: menos risco político e menos correção no prazo final.",
       pros: [
         "Reduz risco de erro no prazo do Censo",
         "Validação por escola antes do envio",
@@ -58,8 +58,8 @@
     {
       src: "assets/img/tela-transporte.jpg",
       url: "transporte",
-      title: "Transporte escolar · rotas ligadas ao aluno",
-      desc: "Rotas, mapa e frota conectados à matrícula: a SME sabe quem tem direito e quem está na viagem.",
+      title: "Passo da operação 5 · Transporte",
+      desc: "Módulo sob demanda: rotas e frota ligadas à matrícula oficial — entra quando a logística é prioridade da gestão.",
       pros: [
         "Ocupação alinhada ao aluno matriculado",
         "Visibilidade para a família e para a gestão",
@@ -69,8 +69,8 @@
     {
       src: "assets/img/tela-relatorios.jpg",
       url: "documentos",
-      title: "Documentos e boletins · emissão confiável",
-      desc: "Boletins e documentos oficiais com validação pública por QR Code — atendimento mais rápido ao cidadão.",
+      title: "Passo da operação 5 · Documentos",
+      desc: "Emissão oficial a partir da mesma base — atendimento ao cidadão sem processo manual demorado.",
       pros: [
         "Emissão sem depender de processo manual demorado",
         "Autenticidade verificável pela família",
@@ -80,8 +80,8 @@
     {
       src: "assets/img/tela-servlitcys.jpg",
       url: "servlitcys",
-      title: "SERVLITCYS · indicadores para decidir",
-      desc: "Painéis e mapa territorial cruzando i-Educar com FUNDEB, Censo e SAEB — leitura gerencial do município.",
+      title: "Passo da operação 6 · SERVLITCYS",
+      desc: "Camada de leitura para gabinete e conselhos: cruza a base local com FUNDEB, Censo e território.",
       pros: [
         "Apoia priorização e diagnóstico da rede",
         "Une dado operacional e contexto público",
@@ -91,8 +91,8 @@
     {
       src: "assets/img/tela-moodle.jpg",
       url: "moodle",
-      title: "Moodle · capacitação sem parar a rede",
-      desc: "Ambiente de treinamento híbrido: trilhas online por perfil com apoio presencial na implantação.",
+      title: "Passo 4 da decisão · Moodle",
+      desc: "Capacitação entra depois de definir o pacote e o fluxo — para a equipe operar com padrão antes de escalar.",
       pros: [
         "Padroniza o treinamento em vários municípios",
         "Registra progresso e certificação da equipe",

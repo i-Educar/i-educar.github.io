@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>i-Educar — a gestão da sua rede de ensino em um só sistema</title>
-  <meta name="description" content="Para secretários e gestores: i-Educar, i-Diário, Moodle híbrido, Censo, transporte e analytics — sem custo de licença e com dados sob controle do município.">
-  <meta property="og:title" content="i-Educar — a gestão da sua rede de ensino em um só sistema">
-  <meta property="og:description" content="Software Público Brasileiro para secretarias municipais: uma base, menos planilha, mais decisão.">
+  <title>i-Educar — rota de decisão para gestores da rede municipal</title>
+  <meta name="description" content="Fluxo de decisão para secretários e gestores: diagnóstico, solução, operação, capacitação, evidências, demonstração e implantação do ecossistema i-Educar.">
+  <meta property="og:title" content="i-Educar — rota de decisão para gestores da rede municipal">
+  <meta property="og:description" content="Do problema da planilha à decisão de implantar: um caminho claro para a secretaria municipal.">
   <meta property="og:image" content="https://i-educar.github.io/assets/img/ieducar-og.png">
   <meta property="og:url" content="https://i-educar.github.io/">
   <link rel="canonical" href="https://i-educar.github.io/">
@@ -24,171 +24,224 @@
         </span>
         i-Educar <small>org</small>
       </a>
-      <nav class="nav" aria-label="Seções">
-        <a href="#fatos">Resultados</a>
-        <a href="#ecossistema">Soluções</a>
-        <a href="#idiario">i-Diário</a>
-        <a href="#moodle">Capacitação</a>
-        <a href="#album">Telas</a>
-        <a href="#testes">Demonstração</a>
-        <a href="#plugins">Módulos</a>
-        <a href="#equipe">Parceiros</a>
+      <nav class="nav" aria-label="Rota de decisão">
+        <a href="#diagnostico">1. Diagnóstico</a>
+        <a href="#solucao">2. Solução</a>
+        <a href="#operacao">3. Operação</a>
+        <a href="#capacitacao">4. Capacitação</a>
+        <a href="#evidencias">5. Evidências</a>
+        <a href="#avaliar">6. Avaliar</a>
+        <a href="#decisao">7. Decidir</a>
       </nav>
     </div>
   </header>
 
   <main id="topo">
-    <section class="hero" aria-label="Apresentação">
+    <!-- 0. PROPOSTA -->
+    <section class="hero" aria-label="Proposta">
       <div class="hero-media" aria-hidden="true">
         <img src="assets/img/tela-ieducar-gestao.jpg" alt="" width="1600" height="900">
       </div>
       <div class="wrap">
-        <p class="eyebrow">Para secretarias municipais · Software Público · GPL v2</p>
-        <h1>A gestão da sua rede de ensino, em um só sistema</h1>
+        <p class="eyebrow">Rota de decisão para secretarias · Software Público · GPL v2</p>
+        <h1>Da planilha à decisão: um sistema para a rede inteira</h1>
         <p class="lede">
-          Menos planilha, menos retrabalho e um número confiável para matrícula, frequência,
-          Censo e atendimento às famílias — com o histórico da rede sob controle do município.
+          Este site segue o caminho que o gestor precisa percorrer: entender o problema,
+          ver a solução, checar a operação, capacitar a equipe, olhar evidências e só então decidir.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#album">Ver como a equipe vai usar</a>
-          <a class="btn btn-ghost" href="docs/documentacao-padrao.pdf">Baixar material para gestores</a>
+          <a class="btn btn-primary" href="#diagnostico">Começar pelo diagnóstico</a>
+          <a class="btn btn-ghost" href="#decisao">Ir para a decisão</a>
         </div>
       </div>
     </section>
 
-    <section id="fatos" class="band band-ink" aria-label="Resultados">
-      <div class="facts wrap-wide">
+    <!-- JOURNEY + DIAGNÓSTICO + RESULTADOS -->
+    <section id="diagnostico" class="band band-ink" aria-label="Diagnóstico">
+      <div class="section wrap reveal">
+        <p class="kicker">Passo 1 · Diagnóstico</p>
+        <h2>Onde a gestão perde tempo e confiabilidade</h2>
+        <p class="lead">
+          Se cada escola guarda o dado à sua maneira, a secretaria gasta a semana consolidando
+          planilhas — e ainda assim não tem um número único para gabinete, Censo e atendimento às famílias.
+        </p>
+
+        <nav class="journey" aria-label="Mapa da decisão">
+          <a href="#diagnostico"><span class="step">Passo 1</span><strong>Diagnóstico</strong><span>Por que mudar</span></a>
+          <a href="#solucao"><span class="step">Passo 2</span><strong>Solução</strong><span>O que entra no pacote</span></a>
+          <a href="#operacao"><span class="step">Passo 3</span><strong>Operação</strong><span>Como a rede usa</span></a>
+          <a href="#capacitacao"><span class="step">Passo 4</span><strong>Capacitação</strong><span>Como a equipe aprende</span></a>
+          <a href="#evidencias"><span class="step">Passo 5</span><strong>Evidências</strong><span>Telas e materiais</span></a>
+          <a href="#avaliar"><span class="step">Passo 6</span><strong>Avaliar</strong><span>Testar e decidir</span></a>
+        </nav>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
+            <h3>Dado espalhado</h3>
+            <p>Matrícula em um lugar, frequência em outro, histórico em pasta. A SME não fecha um indicador sem ligar para a escola.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-queue"></use></svg></div>
+            <h3>Fila e Censo no limite</h3>
+            <p>Vagas e Educacenso viram força-tarefa. Erro de digitação atrasa repasse e gera desgaste político.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-shield"></use></svg></div>
+            <h3>Dependência de fornecedor fechado</h3>
+            <p>Sistema proprietário prende a rede: troca de prestador vira risco de perder histórico e recomeçar do zero.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="facts wrap-wide" id="resultados">
         <div class="fact"><strong>+100</strong><span>municípios já operam com i-Educar</span></div>
         <div class="fact"><strong>+2.050</strong><span>escolas na mesma lógica de gestão</span></div>
         <div class="fact"><strong>+500 mil</strong><span>alunos em cadastro único</span></div>
         <div class="fact"><strong>0</strong><span>custo de licença de software</span></div>
       </div>
-      <div class="section wrap reveal">
-        <p class="kicker">Por que secretarias escolhem</p>
-        <h2>O que muda na prática da gestão</h2>
-        <p class="lead">
-          Quando cada escola guarda o dado à sua maneira, a secretaria perde dias consolidando
-          informação. Com o i-Educar, matrícula, frequência e documentos saem da mesma base —
-          pronta para Censo, relatórios e atendimento ao cidadão.
-        </p>
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-users"></use></svg></div>
-            <h3>Um aluno, um cadastro</h3>
-            <p>A SME enxerga a rede inteira sem pedir planilha escola por escola. O mesmo registro serve para matrícula, diário, fila e Censo.</p>
-          </article>
-          <article class="card">
-            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-shield"></use></svg></div>
-            <h3>Sem ficar preso a licença</h3>
-            <p>Software Público GPL v2: o município não paga licença de uso, audita o código e leva o histórico consigo se trocar de prestador.</p>
-          </article>
-          <article class="card">
-            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-chart"></use></svg></div>
-            <h3>Decisão com dado atual</h3>
-            <p>Indicadores de matrícula, frequência e rede em tempo quase real — base para alocação de professores, vagas e prestação de contas.</p>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <section id="ecossistema" class="band band-paper">
+    <!-- SOLUÇÃO -->
+    <section id="solucao" class="band band-paper">
       <div class="section wrap reveal">
-        <p class="kicker">Mapa da solução</p>
-        <h2>Tudo que a secretaria precisa, conectado</h2>
+        <p class="kicker">Passo 2 · Solução</p>
+        <h2>O que a secretaria passa a ter no pacote</h2>
         <p class="lead">
-          O i-Educar é o sistema central da rede. Ao redor dele, o i-Diário atende o professor,
-          a pré-matrícula organiza a fila e os módulos satélite cobrem transporte, BI e obrigações federais.
+          Decida pelo núcleo (i-Educar), pelo microssistema do professor (i-Diário) e pelos módulos
+          que a rede precisa agora — sem trocar de sistema a cada nova demanda.
         </p>
         <div class="grid-3">
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-school"></use></svg></div>
-            <h3>i-Educar · secretaria e escola</h3>
-            <p>Matrícula, servidores, documentos, Educacenso e a visão gerencial da rede — o “sistema da prefeitura” no dia a dia.</p>
-            <div class="pill-row"><span class="pill">Núcleo SGE</span><span class="pill">Portábilis</span></div>
+            <h3>1º · Núcleo i-Educar</h3>
+            <p>Cadastro único, matrícula, servidores, documentos e Educacenso. É a base da decisão: sem isso, o resto não se sustenta.</p>
+            <div class="pill-row"><span class="pill">Prioridade máxima</span><span class="pill">Portábilis</span></div>
           </article>
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-clipboard"></use></svg></div>
-            <h3>i-Diário · sala de aula</h3>
-            <p>Microssistema do professor: chamada, notas e planejamento na mesma base. A secretaria deixa de digitar o que já foi lançado na turma.</p>
-            <div class="pill-row"><span class="pill">Microssistema</span><span class="pill">Web e app</span></div>
+            <h3>2º · i-Diário</h3>
+            <p>Microssistema do professor na mesma base. Entra em seguida para eliminar digitação duplicada de frequência e notas.</p>
+            <div class="pill-row"><span class="pill">Logo após o núcleo</span><span class="pill">Microssistema</span></div>
           </article>
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-puzzle"></use></svg></div>
-            <h3>Módulos da operação</h3>
-            <p>Pré-matrícula, transporte, relatórios avançados, gov.br, biometria e analytics — plugados sem trocar o sistema principal.</p>
-            <div class="pill-row"><span class="pill">Buriti</span><span class="pill">Sob demanda</span></div>
+            <h3>3º · Módulos sob demanda</h3>
+            <p>Pré-matrícula, transporte, relatórios, gov.br, biometria e analytics — conforme a prioridade política da gestão.</p>
+            <div class="pill-row"><span class="pill">Sob demanda</span><span class="pill">Buriti</span></div>
           </article>
         </div>
+        <div class="pill-row" style="margin-top:1.2rem">
+          <span class="pill">Sem custo de licença</span>
+          <span class="pill">Software Público Brasileiro</span>
+          <span class="pill">GPL v2 · histórico do município</span>
+        </div>
       </div>
     </section>
 
-    <section id="idiario" class="band band-soft">
+    <!-- OPERAÇÃO (fluxo) -->
+    <section id="operacao" class="band band-soft">
       <div class="section wrap reveal">
-        <div class="feature-row">
+        <p class="kicker">Passo 3 · Operação</p>
+        <h2>Como a informação sobe até a decisão</h2>
+        <p class="lead">
+          Ordem recomendada de uso na rede: do cadastro da secretaria à sala de aula, à família,
+          ao Censo, ao transporte e aos indicadores do gabinete.
+        </p>
+
+        <ol class="flow-steps">
+          <li>
+            <div>
+              <h3>Secretaria cadastra a rede no i-Educar</h3>
+              <p>Escolas, turmas, alunos, servidores e matrículas ficam em uma base só. Esse é o ponto de partida de toda a gestão.</p>
+              <span class="for-who">Quem decide: SME e direção</span>
+            </div>
+          </li>
+          <li id="idiario">
+            <div>
+              <h3>Professor lança no i-Diário (mesma base)</h3>
+              <p>Chamada, notas e planejamento na sala. A secretaria deixa de redigitar o que já foi lançado na turma.</p>
+              <span class="for-who">Quem usa: professor · Quem governa o dado: SME</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Família acessa vaga pela pré-matrícula</h3>
+              <p>Fila e critérios transparentes reduzem conflito na porta da escola e dão demanda real para o planejamento de oferta.</p>
+              <span class="for-who">Quem usa: família · Quem regula: SME</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Rede exporta o Educacenso com menos retrabalho</h3>
+              <p>O Censo aproveita o cadastro do ano — não uma força-tarefa paralela no prazo final.</p>
+              <span class="for-who">Quem responde: SME / equipe do Censo</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Transporte e documentos acompanham o aluno</h3>
+              <p>Rotas e emissão de boletins usam a matrícula oficial — menos divergência entre setores.</p>
+              <span class="for-who">Quem opera: transporte, secretaria escolar</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Gestão lê indicadores e decide</h3>
+              <p>Painéis e SERVLITCYS cruzam a base local com FUNDEB, Censo e território para priorizar ação.</p>
+              <span class="for-who">Quem decide: secretário, gabinete, conselhos</span>
+            </div>
+          </li>
+        </ol>
+
+        <div class="feature-row" style="margin-top:2rem">
           <div class="feature-copy">
-            <p class="kicker">Microssistema conectado</p>
+            <p class="kicker">Destaque do fluxo</p>
             <h2>O professor lança na sala. A secretaria já vê.</h2>
             <p class="lead">
-              O i-Diário é o ambiente do professor ligado ao i-Educar. Ele não cria outro cadastro:
-              usa a turma e o aluno que a secretaria já registrou e devolve frequência e notas para a mesma base.
+              O i-Diário é o microssistema pedagógico conectado ao i-Educar: produto próprio do professor,
+              sem cadastro paralelo. Entra no passo 2 da operação, depois que o núcleo está estabilizado.
             </p>
-            <div class="grid-2" style="margin-bottom:1.2rem">
-              <article class="card">
-                <h3>Para a SME</h3>
-                <ul>
-                  <li>Frequência e notas sem digitação duplicada</li>
-                  <li>Apoio à busca ativa e ao boletim</li>
-                  <li>Menos atraso no fechamento de período</li>
-                </ul>
-              </article>
-              <article class="card">
-                <h3>Para a escola</h3>
-                <ul>
-                  <li>Rotina do professor em web e app</li>
-                  <li>Chamada e avaliações no mesmo fluxo</li>
-                  <li>Planejamento alinhado à turma oficial</li>
-                </ul>
-              </article>
-            </div>
-            <a class="btn btn-dark" href="#album" data-open-album="2">Abrir tela do i-Diário</a>
+            <a class="btn btn-dark" href="#evidencias" data-open-album="2">Ver tela do i-Diário</a>
           </div>
           <div class="device">
-            <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>i-diario · professor</span></div>
+            <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>passo 2 · i-diario</span></div>
             <div class="device-screen">
-              <img src="assets/img/tela-idiario.jpg" width="1600" height="900" alt="Tela do i-Diário com chamada" loading="lazy">
+              <img src="assets/img/tela-idiario.jpg" width="1600" height="900" alt="Tela do i-Diário" loading="lazy">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="moodle" class="band band-paper">
+    <!-- CAPACITAÇÃO -->
+    <section id="capacitacao" class="band band-paper">
       <div class="section wrap reveal">
         <div class="feature-row reverse">
           <div class="feature-copy">
-            <p class="kicker">Capacitação da equipe</p>
-            <h2>Treinar a rede sem parar a operação</h2>
+            <p class="kicker">Passo 4 · Capacitação</p>
+            <h2>Treinar a equipe antes de escalar o uso</h2>
             <p class="lead">
-              O Moodle entra como ambiente de treinamento híbrido: trilhas online por perfil
-              (secretaria, escola e professor), com apoio presencial e salas virtuais na implantação.
+              Depois de definir o pacote e o fluxo operacional, a decisão segura inclui capacitação.
+              O Moodle sustenta treinamento híbrido: trilhas online por perfil com apoio presencial.
             </p>
             <div class="grid-2" style="margin-bottom:1.2rem">
               <article class="card">
                 <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-book"></use></svg></div>
-                <h3>O gestor ganha</h3>
+                <h3>Por que vem agora</h3>
                 <ul>
-                  <li>Padronização do treinamento em vários municípios</li>
-                  <li>Registro de progresso e certificação</li>
-                  <li>Menos dependência de “aula única” presencial</li>
+                  <li>Evita implantar sem a equipe pronta</li>
+                  <li>Padroniza o uso em todas as escolas</li>
+                  <li>Gera registro de progresso e certificação</li>
                 </ul>
               </article>
               <article class="card">
                 <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-users"></use></svg></div>
-                <h3>A equipe aprende</h3>
+                <h3>Para quem</h3>
                 <ul>
-                  <li>Conteúdo do i-Educar, i-Diário e módulos</li>
-                  <li>Ritmo flexível com suporte local</li>
-                  <li>Continuidade após a implantação</li>
+                  <li>SME e técnicos da secretaria</li>
+                  <li>Direção e secretaria escolar</li>
+                  <li>Professores no i-Diário</li>
                 </ul>
               </article>
             </div>
@@ -201,251 +254,229 @@
           <div class="device">
             <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>moodle · capacitação</span></div>
             <div class="device-screen">
-              <img src="assets/img/tela-moodle.jpg" width="1600" height="900" alt="Ambiente Moodle de capacitação" loading="lazy">
+              <img src="assets/img/tela-moodle.jpg" width="1600" height="900" alt="Moodle de capacitação" loading="lazy">
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="album" class="band band-soft">
+    <!-- EVIDÊNCIAS -->
+    <section id="evidencias" class="band band-soft">
       <div class="section wrap-wide reveal">
         <div class="album-head">
           <div>
-            <p class="kicker">Tour visual</p>
-            <h2>Veja o sistema como a equipe vai usar</h2>
-            <p class="lead">Clique em uma tela para abrir o álbum com a explicação para gestores e os ganhos de cada ferramenta.</p>
+            <p class="kicker">Passo 5 · Evidências</p>
+            <h2>Comprove na tela antes de fechar a pauta</h2>
+            <p class="lead">Álbum na ordem da operação: secretaria → professor → família → Censo → transporte → documentos → indicadores → capacitação.</p>
           </div>
         </div>
         <div class="album-grid" id="album-grid">
           <button type="button" class="album-item" data-album-index="0">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>gestão da rede</span></div>
-              <div class="device-screen"><img src="assets/img/tela-ieducar-gestao.jpg" alt="Painel de gestão" width="1600" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1 · secretaria</span></div>
+              <div class="device-screen"><img src="assets/img/tela-ieducar-gestao.jpg" alt="Painel" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Painel da secretaria</strong><span>Visão da rede em um lugar</span></div>
+            <div class="meta"><strong>1. Painel da secretaria</strong><span>Visão da rede</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="1">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>matrícula</span></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1 · matrícula</span></div>
               <div class="device-screen"><img src="assets/img/tela-matricula.jpg" alt="Matrícula" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Matrícula</strong><span>Cadastro oficial do aluno</span></div>
+            <div class="meta"><strong>1. Matrícula</strong><span>Cadastro oficial</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="2">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>i-diario</span></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>2 · i-diario</span></div>
               <div class="device-screen"><img src="assets/img/tela-idiario.jpg" alt="i-Diário" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>i-Diário</strong><span>Professor na mesma base</span></div>
+            <div class="meta"><strong>2. i-Diário</strong><span>Professor na base</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="3">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>fila de vagas</span></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>3 · vagas</span></div>
               <div class="device-screen"><img src="assets/img/tela-fila.jpg" alt="Fila" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Pré-matrícula</strong><span>Fila transparente</span></div>
+            <div class="meta"><strong>3. Pré-matrícula</strong><span>Fila transparente</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="4">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>censo escolar</span></div>
-              <div class="device-screen"><img src="assets/img/tela-censo.jpg" alt="Educacenso" width="1600" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>4 · censo</span></div>
+              <div class="device-screen"><img src="assets/img/tela-censo.jpg" alt="Censo" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Educacenso</strong><span>Menos correção de última hora</span></div>
+            <div class="meta"><strong>4. Educacenso</strong><span>Menos correção final</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="5">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>transporte</span></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5 · transporte</span></div>
               <div class="device-screen"><img src="assets/img/tela-transporte.jpg" alt="Transporte" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Transporte escolar</strong><span>Rotas ligadas ao aluno</span></div>
+            <div class="meta"><strong>5. Transporte</strong><span>Rota ligada ao aluno</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="6">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>documentos</span></div>
-              <div class="device-screen"><img src="assets/img/tela-relatorios.jpg" alt="Relatórios" width="1600" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5 · documentos</span></div>
+              <div class="device-screen"><img src="assets/img/tela-relatorios.jpg" alt="Documentos" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Documentos e boletins</strong><span>Emissão com autenticidade</span></div>
+            <div class="meta"><strong>5. Documentos</strong><span>Boletim com QR Code</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="7">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>analytics</span></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>6 · indicadores</span></div>
               <div class="device-screen"><img src="assets/img/tela-servlitcys.jpg" alt="SERVLITCYS" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>SERVLITCYS</strong><span>Indicadores para decidir</span></div>
+            <div class="meta"><strong>6. SERVLITCYS</strong><span>Indicadores para decidir</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="8">
             <div class="device">
               <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>capacitação</span></div>
               <div class="device-screen"><img src="assets/img/tela-moodle.jpg" alt="Moodle" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Moodle</strong><span>Treinamento híbrido</span></div>
+            <div class="meta"><strong>Capacitação</strong><span>Moodle híbrido</span></div>
           </button>
+        </div>
+
+        <div style="margin-top:2.5rem">
+          <p class="kicker">Material para a reunião</p>
+          <h2 style="max-width:22ch">Leve evidência escrita para o gabinete</h2>
+          <p class="lead">PDFs para pautar secretário, prefeito e equipe técnica — depois das telas, antes da contratação.</p>
+          <div class="docs-row">
+            <article class="doc-card">
+              <h3>Material padrão</h3>
+              <p>Visão de i-Educar, i-Diário e integrações para decisão política e técnica.</p>
+              <a class="btn btn-dark" href="docs/documentacao-padrao.pdf">Baixar PDF</a>
+            </article>
+            <article class="doc-card">
+              <h3>Roteiro de implantação</h3>
+              <p>Passos de migração, capacitação e operação inicial.</p>
+              <a class="btn btn-outline" href="docs/implantacao-consultoria.pdf">Baixar PDF</a>
+            </article>
+            <article class="doc-card">
+              <h3>Apresentação gerencial</h3>
+              <p>Panorama executivo para secretaria e gabinete.</p>
+              <a class="btn btn-outline" href="docs/apresentacao-gestao-educacional.pdf">Baixar PDF</a>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="testes" class="band band-paper">
+    <!-- AVALIAR -->
+    <section id="avaliar" class="band band-paper">
       <div class="section wrap reveal">
-        <p class="kicker">Demonstração</p>
-        <h2>Ambientes para a equipe avaliar</h2>
+        <p class="kicker">Passo 6 · Avaliar</p>
+        <h2>Teste com a equipe antes de comprometer a rede</h2>
         <p class="lead">
-          Espaço reservado para acessos de teste. Os links ainda não estão liberados ao público —
-          quando forem publicados, gestores e equipes poderão navegar com segurança.
+          Ambientes de demonstração para validar o fluxo com SME, escola e professor.
+          Links ainda não liberados publicamente — a estrutura já está pronta na página.
         </p>
         <div class="test-grid">
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>i-Educar · demonstração</h3>
-            <p>Para secretaria e escola conhecerem o SGE com dados de exemplo.</p>
+            <h3>1. i-Educar</h3>
+            <p>Validar cadastro, matrícula e visão da secretaria.</p>
             <span class="url">demo.i-educar.example /login</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir demonstração</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>i-Diário · demonstração</h3>
-            <p>Para o professor ver chamada e notas na mesma base da rede.</p>
+            <h3>2. i-Diário</h3>
+            <p>Validar chamada e notas na mesma base.</p>
             <span class="url">diario.i-educar.example /login</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir demonstração</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>Moodle · capacitação</h3>
-            <p>Trilhas híbridas de treinamento da implantação.</p>
-            <span class="url">treino.i-educar.example</span>
-            <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir ambiente</a>
-          </article>
-          <article class="test-card">
-            <span class="badge-soon">Em breve</span>
-            <h3>Pré-matrícula</h3>
-            <p>Portal de inscrição e fila como a família vai usar.</p>
+            <h3>3. Pré-matrícula</h3>
+            <p>Validar fila e experiência da família.</p>
             <span class="url">vagas.i-educar.example</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir portal</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>SERVLITCYS</h3>
-            <p>Painéis e mapa para leitura gerencial do município.</p>
-            <span class="url">analise.serventecassessoria.com.br</span>
-            <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir analytics</a>
+            <h3>4. Moodle</h3>
+            <p>Validar trilhas de capacitação da equipe.</p>
+            <span class="url">treino.i-educar.example</span>
+            <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir ambiente</a>
           </article>
           <article class="test-card">
             <span class="badge-soon">Em breve</span>
-            <h3>Transporte escolar</h3>
-            <p>Rotas, mapa e portal da família em ambiente de teste.</p>
+            <h3>5. Transporte</h3>
+            <p>Validar rotas e portal da família.</p>
             <span class="url">transporte.i-educar.example</span>
             <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir módulo</a>
           </article>
+          <article class="test-card">
+            <span class="badge-soon">Em breve</span>
+            <h3>6. SERVLITCYS</h3>
+            <p>Validar painéis para reunião de gestão.</p>
+            <span class="url">analise.serventecassessoria.com.br</span>
+            <a class="btn btn-disabled" href="#" aria-disabled="true" tabindex="-1">Abrir analytics</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="portabilis" class="band band-soft">
+    <!-- CONFIANÇA + AMPLIAÇÃO + PARCEIROS + DECISÃO -->
+    <section id="decisao" class="band band-soft">
       <div class="section wrap reveal">
-        <p class="kicker">Quem mantém o núcleo</p>
-        <h2>Portábilis: mantenedora nacional do i-Educar</h2>
+        <p class="kicker">Passo 7 · Decidir com segurança</p>
+        <h2>Governança, ampliação e quem implementa</h2>
         <p class="lead">
-          A Portábilis conduz a evolução do core, revisa contribuições da comunidade e mantém
-          o software alinhado às redes públicas. Esta página é independente e compatível com esse upstream.
-          <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
-          <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">GitHub</a>.
+          Antes de fechar: quem mantém o núcleo, o que pode ser ampliado depois e quem leva a implantação até a sua rede.
         </p>
-        <div class="pill-row">
-          <span class="pill">Software Público Brasileiro</span>
-          <span class="pill">GPL v2</span>
-          <span class="pill">BID · Code for Development</span>
-          <span class="pill">Sem custo de licença</span>
-        </div>
-      </div>
-    </section>
 
-    <section id="plugins" class="band band-paper">
-      <div class="section wrap reveal">
-        <p class="kicker">Amplie a operação</p>
-        <h2>Módulos que a Buriti entrega sobre o i-Educar</h2>
-        <p class="lead">Para gestores: escolha o que a rede precisa agora — sem trocar o sistema principal.</p>
-        <div class="plugin-grid">
-          <article class="plugin"><span class="tag">Documentos</span><h3><a href="https://github.com/JaderGabriel/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports</a></h3><p>Boletins e PDFs no dia a dia, com QR Code de autenticidade.</p></article>
-          <article class="plugin"><span class="tag">Indicadores</span><h3><a href="https://github.com/JaderGabriel/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI</a></h3><p>Painéis para a secretaria acompanhar a rede.</p></article>
-          <article class="plugin"><span class="tag">Logística</span><h3>Transporte Escolar v2</h3><p>Rotas, mapa e portal da família ligados à matrícula.</p></article>
-          <article class="plugin"><span class="tag">Censo</span><h3><a href="https://github.com/JaderGabriel/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3><p>Importação de arquivos do INEP com menos retrabalho.</p></article>
-          <article class="plugin"><span class="tag">Acesso à vaga</span><h3><a href="https://github.com/JaderGabriel/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula</a></h3><p>Fila e critérios transparentes para a comunidade.</p></article>
-          <article class="plugin"><span class="tag">Acesso seguro</span><h3>Login gov.br</h3><p>Identidade federal na porta de entrada do sistema.</p></article>
-          <article class="plugin"><span class="tag">Presença</span><h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE</a></h3><p>Biometria facial integrada à frequência escolar.</p></article>
-          <article class="plugin"><span class="tag">Operação</span><h3>Chamados · Pulse · SGP</h3><p>Suporte interno, monitoramento e Gestão Presente (MEC).</p></article>
-          <article class="plugin"><span class="tag">Implantação</span><h3><a href="https://github.com/JaderGabriel/i-educar-setup-municipio-base-package" rel="noopener noreferrer">Setup município</a></h3><p>Acelera calendário, perfis e estrutura pedagógica inicial.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="servlitcys" class="band band-soft">
-      <div class="section wrap reveal">
-        <div class="feature-row">
-          <div class="feature-copy">
-            <p class="kicker">Leitura para decidir</p>
-            <h2>SERVLITCYS: indicadores do município em um só painel</h2>
-            <p class="lead">
-              Para o gestor que precisa cruzar matrícula, FUNDEB, Censo e território:
-              consultoria analítica e mapa Horizonte sobre a base do i-Educar.
-            </p>
+        <div class="grid-2" style="margin-bottom:1.2rem">
+          <article class="card" id="portabilis">
+            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-shield"></use></svg></div>
+            <h3>Mantenedora nacional · Portábilis</h3>
             <p>
-              <a href="https://github.com/JaderGabriel/serventec-servlitcys" rel="noopener noreferrer">Ver repositório</a>
-              · acesso de demonstração na seção acima (em breve).
+              Conduz o core do i-Educar, revisa contribuições e mantém o Software Público alinhado às redes.
+              Esta página é independente e compatível com esse upstream.
             </p>
-          </div>
-          <div class="device">
-            <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>servlitcys</span></div>
-            <div class="device-screen">
-              <img src="assets/img/tela-servlitcys.jpg" width="1600" height="900" alt="Painel SERVLITCYS" loading="lazy">
+            <p style="margin-top:.7rem">
+              <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
+              <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">GitHub</a>
+            </p>
+          </article>
+          <article class="card" id="ampliar">
+            <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-puzzle"></use></svg></div>
+            <h3>Ampliar depois · módulos Buriti</h3>
+            <p>
+              Com o núcleo estável, a gestão escolhe o próximo módulo: relatórios, BI, transporte,
+              Educacenso import, gov.br, GIDE, chamados, Pulse, SGP ou setup municipal.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Sob demanda</span>
+              <span class="pill">Sem trocar o SGE</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="documentacao" class="band band-paper">
-      <div class="section wrap reveal">
-        <p class="kicker">Material de apoio</p>
-        <h2>Documentos para apresentar à gestão</h2>
-        <p class="lead">PDFs prontos para reunião com secretário, prefeito e equipe técnica.</p>
-        <div class="docs-row">
-          <article class="doc-card">
-            <h3>Material padrão</h3>
-            <p>Visão de i-Educar, i-Diário e integrações para decisão política e técnica.</p>
-            <a class="btn btn-dark" href="docs/documentacao-padrao.pdf">Baixar PDF</a>
-          </article>
-          <article class="doc-card">
-            <h3>Roteiro de implantação</h3>
-            <p>Passos de consultoria, migração e capacitação da rede.</p>
-            <a class="btn btn-outline" href="docs/implantacao-consultoria.pdf">Baixar PDF</a>
-          </article>
-          <article class="doc-card">
-            <h3>Apresentação gerencial</h3>
-            <p>Panorama executivo para secretarias e gabinete.</p>
-            <a class="btn btn-outline" href="docs/apresentacao-gestao-educacional.pdf">Baixar PDF</a>
           </article>
         </div>
-      </div>
-    </section>
 
-    <section id="equipe" class="band band-soft">
-      <div class="section wrap reveal">
-        <p class="kicker">Quem leva até a sua rede</p>
-        <h2>Buriti e LibreCode</h2>
-        <p class="lead">
-          Evolução dos módulos satélite, implantação e suporte — em cooperação com a mantenedora nacional Portábilis.
-        </p>
-        <div class="team">
+        <div class="plugin-grid" id="plugins" style="margin-bottom:2rem">
+          <article class="plugin"><span class="tag">Documentos</span><h3><a href="https://github.com/JaderGabriel/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports</a></h3><p>Boletins e PDFs com QR Code.</p></article>
+          <article class="plugin"><span class="tag">Indicadores</span><h3><a href="https://github.com/JaderGabriel/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI</a></h3><p>Painéis da secretaria.</p></article>
+          <article class="plugin"><span class="tag">Logística</span><h3>Transporte Escolar v2</h3><p>Rotas e portal da família.</p></article>
+          <article class="plugin"><span class="tag">Censo</span><h3><a href="https://github.com/JaderGabriel/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3><p>Importação TXT do INEP.</p></article>
+          <article class="plugin"><span class="tag">Acesso</span><h3><a href="https://github.com/JaderGabriel/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula</a></h3><p>Fila e critérios públicos.</p></article>
+          <article class="plugin"><span class="tag">Identidade</span><h3>Login gov.br</h3><p>OpenID Connect na entrada.</p></article>
+          <article class="plugin"><span class="tag">Presença</span><h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE</a></h3><p>Biometria facial.</p></article>
+          <article class="plugin"><span class="tag">Operação</span><h3>Chamados · Pulse · SGP</h3><p>Suporte, monitoramento e MEC.</p></article>
+          <article class="plugin"><span class="tag">Analytics</span><h3><a href="https://github.com/JaderGabriel/serventec-servlitcys" rel="noopener noreferrer">SERVLITCYS</a></h3><p>Indicadores e mapa Horizonte.</p></article>
+        </div>
+
+        <div class="team" id="equipe">
           <article>
             <img class="team-logo" src="assets/img/logo-buriti.png" width="120" height="114" alt="Logo Buriti">
             <h3>Buriti</h3>
-            <p>Desenvolvimento dos plugins, transporte, relatórios e curadoria desta página na organização i-Educar.</p>
+            <p>Desenvolve os módulos satélite e cuida desta página na organização i-Educar — alinhada ao core Portábilis.</p>
             <a class="btn btn-outline" href="https://github.com/i-Educar" rel="noopener noreferrer">Organização no GitHub</a>
           </article>
           <article>
             <img class="team-logo" src="assets/img/librecode.png" width="180" height="110" alt="Logo LibreCode">
             <h3>LibreCode</h3>
-            <p>Cooperativa de software livre: hospedagem soberana, suporte e customização para o setor público.</p>
+            <p>Cooperativa de software livre: hospedagem soberana, suporte e implantação para o setor público.</p>
             <a class="btn btn-dark" href="https://librecode.coop" rel="noopener noreferrer">Falar com a LibreCode</a>
           </article>
         </div>
@@ -454,15 +485,16 @@
 
     <section class="band band-ink">
       <div class="section wrap cta-final reveal">
-        <p class="kicker">Próximo passo</p>
-        <h2>Quer ver isso rodando na sua secretaria?</h2>
+        <p class="kicker">Fechar a decisão</p>
+        <h2>Pronto para pautar a implantação na sua secretaria?</h2>
         <p class="lead">
-          Implantação, migração de dados, capacitação híbrida no Moodle e evolução contínua —
-          com o núcleo Portábilis e os módulos Buriti.
+          Você percorreu diagnóstico → solução → operação → capacitação → evidências → avaliação.
+          O próximo passo é conversar sobre escopo, cronograma e capacitação híbrida.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="https://librecode.coop" rel="noopener noreferrer">Solicitar conversa comercial</a>
-          <a class="btn btn-ghost" href="#testes">Ver ambientes de demonstração</a>
+          <a class="btn btn-ghost" href="#avaliar">Revisar ambientes de teste</a>
+          <a class="btn btn-ghost" href="docs/documentacao-padrao.pdf">Baixar material do gabinete</a>
         </div>
       </div>
     </section>
@@ -471,13 +503,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <strong>i-Educar</strong> · compatível com o upstream Portábilis<br>
+        <strong>i-Educar</strong> · rota de decisão para gestores · upstream Portábilis<br>
         GPL v2 · Buriti · <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>
       </div>
       <div>
-        <a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">Core</a> ·
-        <a href="https://ieducar.org/" rel="noopener noreferrer">ieducar.org</a> ·
-        <a href="docs/documentacao-padrao.pdf">Material PDF</a>
+        <a href="#diagnostico">Diagnóstico</a> ·
+        <a href="#decisao">Decisão</a> ·
+        <a href="docs/documentacao-padrao.pdf">PDF</a>
       </div>
     </div>
   </footer>
