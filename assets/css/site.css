@@ -841,6 +841,32 @@ body.album-open { overflow: hidden; }
   font-size: .93rem;
 }
 
+.coop {
+  display: grid;
+  gap: 1.15rem;
+}
+.coop-banner {
+  padding: 1.4rem 1.45rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(14, 127, 108, 0.1), rgba(184, 137, 26, 0.08));
+  border: 1px solid rgba(14, 127, 108, 0.22);
+}
+.coop-banner h3 {
+  margin: 0 0 .55rem;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.coop-banner p:not(.kicker) {
+  margin: 0 0 1rem;
+  max-width: 48rem;
+  color: var(--muted);
+}
+.coop-banner .btn { margin-top: .15rem; }
+.team .pill-row { margin: .85rem 0 1rem; }
+.team .btn { margin-top: auto; }
+
 .team {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -851,7 +877,8 @@ body.album-open { overflow: hidden; }
   border-radius: var(--radius);
   background: var(--paper);
   border: 1px solid var(--line);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: .85rem;
   align-content: start;
   height: 100%;
