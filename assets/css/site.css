@@ -875,103 +875,139 @@ body.album-open { overflow: hidden; }
 .cta-final .lead { color: rgba(244,255,251,.72); }
 
 .site-footer {
-  padding: 1.6rem 0 1.85rem;
-  background: #f7faf9;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: .86rem;
+  background: #071317;
+  color: rgba(244, 255, 251, 0.62);
+  font-size: .84rem;
+  border-top: 1px solid rgba(255,255,255,.06);
 }
-.site-footer .wrap {
+.footer-grid {
   display: grid;
-  gap: .85rem 1.5rem;
-  align-items: center;
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas:
-    "brand orgs"
-    "note note";
+  grid-template-columns: minmax(12rem, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: 1.75rem 1.5rem;
+  padding: 1.75rem 0 1.5rem;
 }
-.footer-brand {
-  grid-area: brand;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .45rem .7rem;
-  min-width: 0;
-}
+.footer-col { min-width: 0; }
 .footer-name {
+  margin: 0 0 .45rem;
   font-family: "Sora", sans-serif;
+  font-size: .98rem;
   font-weight: 700;
-  font-size: .95rem;
   letter-spacing: -0.02em;
-  color: var(--ink);
+  color: #f4fffb;
 }
-.footer-meta {
-  color: var(--muted);
-  font-size: .8rem;
+.footer-desc {
+  margin: 0 0 .7rem;
+  max-width: 28rem;
+  line-height: 1.5;
+  color: rgba(244, 255, 251, 0.58);
 }
-.footer-orgs {
-  grid-area: orgs;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: flex-end;
-  gap: .55rem .15rem;
+.footer-legal {
+  margin: 0;
+  font-size: .75rem;
+  color: rgba(244, 255, 251, 0.42);
 }
-.footer-org {
-  display: flex;
-  flex-direction: column;
-  gap: .12rem;
-  padding: .35rem .7rem;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 10px;
-  transition: background .2s ease;
-}
-.footer-org:hover {
-  background: rgba(14, 127, 108, 0.06);
-  color: inherit;
-}
-.footer-org-role {
-  font-size: .62rem;
-  letter-spacing: .1em;
+.footer-heading {
+  margin: 0 0 .7rem;
+  font-size: .66rem;
+  letter-spacing: .12em;
   text-transform: uppercase;
   font-weight: 800;
-  color: var(--mint);
+  color: var(--mint-2);
 }
-.footer-org-name {
-  font-family: "Sora", sans-serif;
-  font-size: .88rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-  color: var(--ink-2);
-}
-.footer-sep {
-  width: 1px;
-  align-self: stretch;
-  margin: .35rem 0;
-  background: var(--line-strong);
-}
-.footer-note {
-  grid-area: note;
+.footer-col ul {
   margin: 0;
-  padding-top: .15rem;
-  font-size: .78rem;
-  line-height: 1.45;
-  color: #6a7f84;
-  max-width: 52rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: .42rem;
 }
-@media (max-width: 860px) {
-  .site-footer .wrap {
+.footer-menu ul {
+  grid-template-columns: 1fr 1fr;
+  gap: .35rem .85rem;
+}
+.footer-col a {
+  color: rgba(244, 255, 251, 0.78);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-col a:hover { color: #fff; }
+.footer-partners li {
+  display: grid;
+  gap: .05rem;
+}
+.footer-partners span {
+  font-size: .74rem;
+  color: rgba(244, 255, 251, 0.42);
+}
+.footer-bar {
+  border-top: 1px solid rgba(255,255,255,.06);
+  background: #041014;
+}
+.footer-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1rem;
+  padding: .85rem 0;
+  font-size: .76rem;
+  color: rgba(244, 255, 251, 0.45);
+}
+.footer-bar-inner p { margin: 0; }
+.footer-top {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  color: var(--mint-2);
+  text-decoration: none;
+  font-weight: 700;
+}
+.footer-top:hover { color: #fff; }
+.footer-top::before {
+  content: "↑";
+  font-size: .9rem;
+}
+
+.to-top {
+  position: fixed;
+  right: max(1rem, calc((100% - var(--max)) / 2 - 0.25rem));
+  bottom: 1.25rem;
+  z-index: 40;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--mint-2);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(3, 22, 27, 0.28);
+  transition: opacity .2s ease, transform .2s var(--ease);
+}
+.to-top:hover {
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+.to-top[hidden] { display: none !important; }
+
+@media (max-width: 1020px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-about { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .footer-grid {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "brand"
-      "orgs"
-      "note";
+    padding-top: 1.4rem;
   }
-  .footer-orgs {
-    justify-content: flex-start;
+  .footer-menu ul { grid-template-columns: 1fr 1fr; }
+  .to-top {
+    right: 1rem;
+    bottom: 1rem;
   }
-  .footer-sep { display: none; }
 }
 
 .reveal {

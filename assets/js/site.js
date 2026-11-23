@@ -228,4 +228,14 @@
     );
     sections.forEach((s) => io.observe(s));
   }
+
+  const toTop = document.getElementById("to-top");
+  if (toTop) {
+    const toggleToTop = () => {
+      const show = window.scrollY > 480;
+      toTop.hidden = !show;
+    };
+    toggleToTop();
+    window.addEventListener("scroll", toggleToTop, { passive: true });
+  }
 })();

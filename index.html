@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=foot1">
+  <link rel="stylesheet" href="assets/css/site.css?v=foot2">
 </head>
 <body>
   <header class="site-header">
@@ -503,32 +503,65 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-brand">
-        <span class="footer-name">i-Educar</span>
-        <span class="footer-meta">Software Público Brasileiro · GPL v2</span>
+    <div class="wrap footer-grid">
+      <div class="footer-col footer-about">
+        <p class="footer-name">i-Educar</p>
+        <p class="footer-desc">Software público para gestão da educação municipal. Esta página é da organização i-Educar e permanece alinhada ao core mantido pela Portábilis.</p>
+        <p class="footer-legal">GPL v2 · Sem custo de licença</p>
       </div>
-      <div class="footer-orgs" aria-label="Organizações">
-        <a class="footer-org" href="https://ieducar.org/" rel="noopener noreferrer">
-          <span class="footer-org-role">Upstream</span>
-          <span class="footer-org-name">Portábilis</span>
-        </a>
-        <span class="footer-sep" aria-hidden="true"></span>
-        <a class="footer-org" href="https://github.com/i-Educar" rel="noopener noreferrer">
-          <span class="footer-org-role">Módulos e página</span>
-          <span class="footer-org-name">Buriti</span>
-        </a>
-        <span class="footer-sep" aria-hidden="true"></span>
-        <a class="footer-org" href="https://librecode.coop" rel="noopener noreferrer">
-          <span class="footer-org-role">Implantação</span>
-          <span class="footer-org-name">LibreCode</span>
-        </a>
+
+      <nav class="footer-col footer-menu" aria-label="Menu do rodapé">
+        <p class="footer-heading">Fluxo</p>
+        <ul>
+          <li><a href="#desafio">Desafio</a></li>
+          <li><a href="#pacote">Pacote</a></li>
+          <li><a href="#rede">Rede</a></li>
+          <li><a href="#equipe-treino">Equipe</a></li>
+          <li><a href="#provas">Provas</a></li>
+          <li><a href="#testar">Testar</a></li>
+          <li><a href="#implantar">Implantar</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col footer-partners">
+        <p class="footer-heading">Organizações</p>
+        <ul>
+          <li>
+            <a href="https://ieducar.org/" rel="noopener noreferrer">Portábilis</a>
+            <span>Upstream do core</span>
+          </li>
+          <li>
+            <a href="https://github.com/i-Educar" rel="noopener noreferrer">Buriti</a>
+            <span>Módulos e esta página</span>
+          </li>
+          <li>
+            <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>
+            <span>Implantação e suporte</span>
+          </li>
+        </ul>
       </div>
-      <p class="footer-note">
-        Buriti e LibreCode atuam alinhadas ao core mantido pela Portábilis.
-      </p>
+
+      <div class="footer-col footer-links">
+        <p class="footer-heading">Recursos</p>
+        <ul>
+          <li><a href="docs/documentacao-padrao.pdf">Material padrão (PDF)</a></li>
+          <li><a href="docs/implantacao-consultoria.pdf">Roteiro de implantação</a></li>
+          <li><a href="docs/apresentacao-gestao-educacional.pdf">Apresentação gerencial</a></li>
+          <li><a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">GitHub Portábilis</a></li>
+          <li><a href="https://github.com/i-Educar" rel="noopener noreferrer">GitHub i-Educar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <div class="wrap footer-bar-inner">
+        <p>Buriti e LibreCode · alinhadas ao upstream Portábilis</p>
+        <a class="footer-top" href="#topo">Voltar ao topo</a>
+      </div>
     </div>
   </footer>
+
+  <a class="to-top" href="#topo" id="to-top" aria-label="Voltar ao topo" hidden>↑</a>
 
   <div class="lightbox" id="lightbox" hidden aria-hidden="true">
     <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lb-title">
@@ -555,6 +588,6 @@
     </div>
   </div>
 
-  <script src="assets/js/site.js?v=foot1"></script>
+  <script src="assets/js/site.js?v=foot2"></script>
 </body>
 </html>
