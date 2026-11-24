@@ -1356,24 +1356,30 @@ body.album-open { overflow: hidden; }
 }
 .contact-actions {
   display: grid;
-  gap: .65rem;
+  gap: .75rem;
+}
+.contact-card {
+  display: grid;
+  gap: .45rem;
+  padding: .55rem .55rem .6rem;
+  border-radius: 16px;
+  border: 1px solid rgba(244, 255, 251, 0.1);
+  background: rgba(255, 255, 255, 0.03);
 }
 .contact-btn {
   display: flex;
   align-items: center;
   gap: .7rem;
   min-width: 0;
-  padding: .65rem .75rem;
-  border-radius: 14px;
-  border: 1px solid rgba(244, 255, 251, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  padding: .45rem .35rem .35rem .4rem;
+  border-radius: 12px;
+  border: 0;
+  background: transparent;
   text-decoration: none;
-  transition: background .2s ease, border-color .2s ease, transform .2s var(--ease);
+  transition: background .2s ease;
 }
 .contact-btn:hover {
-  background: rgba(23, 165, 139, 0.14);
-  border-color: rgba(23, 165, 139, 0.45);
-  transform: translateY(-1px);
+  background: rgba(23, 165, 139, 0.12);
 }
 .contact-btn-ico {
   flex: 0 0 auto;
@@ -1406,6 +1412,34 @@ body.album-open { overflow: hidden; }
   font-style: normal;
   font-size: .72rem;
   color: rgba(244, 255, 251, 0.48);
+}
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  padding: 0 .35rem .15rem .4rem;
+}
+.social-btn {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: rgba(244, 255, 251, 0.62);
+  background: rgba(244, 255, 251, 0.05);
+  border: 1px solid rgba(244, 255, 251, 0.1);
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s var(--ease);
+}
+.social-btn:hover {
+  color: #f4fffb;
+  background: rgba(23, 165, 139, 0.22);
+  border-color: rgba(23, 165, 139, 0.45);
+  transform: translateY(-1px);
+}
+.social-btn svg {
+  width: .95rem;
+  height: .95rem;
 }
 .footer-bar {
   border-top: 1px solid rgba(255,255,255,.06);
