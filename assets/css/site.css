@@ -143,24 +143,37 @@ button { font: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2rem;
-  padding: 0 .7rem;
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
   border-radius: 999px;
   text-decoration: none;
   color: var(--ink-2);
-  font-family: "Sora", sans-serif;
-  font-size: .78rem;
-  font-weight: 650;
-  letter-spacing: -0.01em;
   border: 1px solid transparent;
   background: transparent;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s var(--ease);
+}
+.nav-flow-list a svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
+}
+.nav-flow-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  transition: color .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+  border: 0;
 }
 .nav-flow-list a:hover {
   color: var(--mint);
   background: var(--mint-soft);
   border-color: rgba(14, 127, 108, 0.18);
+  transform: translateY(-1px);
 }
 .nav-flow-list a.is-done {
   color: #176a59;
