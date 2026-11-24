@@ -1127,9 +1127,10 @@ body.album-open { overflow: hidden; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(12rem, 1.1fr) minmax(16rem, 1.5fr) minmax(10rem, 1fr);
-  gap: 1.75rem 2rem;
+  grid-template-columns: minmax(14rem, 1fr) minmax(18rem, 1.4fr);
+  gap: 1.75rem 2.5rem;
   padding: 1.75rem 0 1.5rem;
+  align-items: start;
 }
 .footer-col { min-width: 0; }
 .footer-name {
