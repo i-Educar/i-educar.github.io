@@ -63,14 +63,17 @@ button { font: inherit; }
 }
 .brand {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: .7rem;
+  gap: .15rem .7rem;
   text-decoration: none;
   color: var(--ink);
   font-family: "Sora", sans-serif;
   font-weight: 700;
   letter-spacing: -0.03em;
   font-size: 1.12rem;
+  max-width: min(22rem, 48vw);
+  line-height: 1.15;
 }
 .brand-mark {
   width: 2.25rem;
@@ -88,11 +91,15 @@ button { font: inherit; }
   display: block;
 }
 .brand small {
+  display: block;
+  width: 100%;
+  margin-left: calc(2.25rem + .7rem);
   font-size: .68rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-transform: none;
   color: var(--mint);
-  font-weight: 700;
+  font-weight: 650;
+  font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
 }
 .nav-flow {
   display: flex;

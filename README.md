@@ -1,6 +1,6 @@
 # i-educar.github.io
 
-Página comercial do ecossistema **i-Educar** (organização [i-Educar](https://github.com/i-Educar)).
+Página comercial do **iEducar - Gestão Educacional em Rede** (ecossistema i-Educar) (organização [i-Educar](https://github.com/i-Educar)).
 
 **Site:** https://i-educar.github.io/
 
