@@ -140,6 +140,7 @@ button { font: inherit; }
   flex: 0 0 auto;
 }
 .nav-flow-list a {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -169,11 +170,79 @@ button { font: inherit; }
   white-space: nowrap;
   border: 0;
 }
-.nav-flow-list a:hover {
+.nav-flow-list a::before {
+  content: attr(data-tip);
+  position: absolute;
+  top: calc(100% + .55rem);
+  left: 50%;
+  z-index: 60;
+  width: max-content;
+  max-width: 14rem;
+  padding: .42rem .65rem;
+  border-radius: 8px;
+  background: var(--ink);
+  color: #f4f7f6;
+  font-size: .72rem;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: .01em;
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -.2rem);
+  transition: opacity .18s ease, transform .18s var(--ease);
+  box-shadow: 0 10px 24px rgba(3, 22, 27, 0.22);
+}
+.nav-flow-list a::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + .28rem);
+  left: 50%;
+  z-index: 60;
+  width: .55rem;
+  height: .55rem;
+  background: var(--ink);
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -.15rem) rotate(45deg);
+  transition: opacity .18s ease, transform .18s var(--ease);
+}
+.nav-flow-list li:nth-last-child(-n+2) a::before {
+  left: auto;
+  right: 0;
+  transform: translate(0, -.2rem);
+}
+.nav-flow-list li:nth-last-child(-n+2) a::after {
+  left: auto;
+  right: 1.05rem;
+  transform: translate(0, -.15rem) rotate(45deg);
+}
+.nav-flow-list a:hover,
+.nav-flow-list a:focus-visible {
   color: var(--mint);
   background: var(--mint-soft);
   border-color: rgba(14, 127, 108, 0.28);
   transform: translateY(-1px);
+}
+.nav-flow-list a:hover::before,
+.nav-flow-list a:focus-visible::before,
+.nav-flow-list a:hover::after,
+.nav-flow-list a:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.nav-flow-list a:hover::after,
+.nav-flow-list a:focus-visible::after {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+.nav-flow-list li:nth-last-child(-n+2) a:hover::before,
+.nav-flow-list li:nth-last-child(-n+2) a:focus-visible::before {
+  transform: translate(0, 0);
+}
+.nav-flow-list li:nth-last-child(-n+2) a:hover::after,
+.nav-flow-list li:nth-last-child(-n+2) a:focus-visible::after {
+  transform: translate(0, 0) rotate(45deg);
 }
 .nav-flow-list a.is-done {
   color: #0e7f6c;
