@@ -454,7 +454,7 @@ section[id] {
   background: #e3f6ef;
   border-color: rgba(23, 165, 139, 0.22);
 }
-.actor-teacher .actor-ico { background: #17a58b; color: #03161b; }
+.actor-teacher .actor-ico { background: #0e7f6c; color: #f4fffb; }
 .actor-family {
   background: var(--sand-soft);
   border-color: rgba(184, 137, 26, 0.22);
@@ -583,8 +583,8 @@ section[id] {
 .band-ink .card p,
 .band-ink .card li { color: rgba(244,255,251,.72); }
 .band-ink .card-ico {
-  background: rgba(23, 165, 139, 0.18);
-  color: var(--mint-2);
+  background: #0e7f6c;
+  color: #f4fffb;
 }
 .pill-row {
   display: flex;
