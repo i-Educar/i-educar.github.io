@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=wide1">
+  <link rel="stylesheet" href="assets/css/site.css?v=footer1">
 </head>
 <body>
   <header class="site-header">
@@ -582,41 +582,39 @@
     <div class="wrap footer-grid">
       <div class="footer-col footer-about">
         <p class="footer-name">iEducar</p>
-        <p class="footer-desc">Gestão Educacional em Rede. Página da organização i-Educar. Cooperação Buriti · LibreCode, alinhada ao core Portábilis.</p>
+        <p class="footer-desc">Gestão Educacional em Rede — software público para secretarias municipais.</p>
         <p class="footer-legal">GPL v2 · Sem custo de licença</p>
       </div>
 
-      <nav class="footer-col footer-menu" aria-label="Menu do rodapé">
-        <p class="footer-heading">Fluxo</p>
-        <ul>
-          <li><a href="#desafio">Desafio</a></li>
-          <li><a href="#pacote">Pacote</a></li>
-          <li><a href="#rede">Rede</a></li>
-          <li><a href="#equipe-treino">Equipe</a></li>
-          <li><a href="#provas">Provas</a></li>
-          <li><a href="#testar">Testar</a></li>
-          <li><a href="#implantar">Implantar</a></li>
-        </ul>
-      </nav>
-
       <div class="footer-col footer-partners">
         <p class="footer-heading">Organizações</p>
-        <ul>
+        <ul class="org-list">
           <li>
-            <a href="https://ieducar.org/" rel="noopener noreferrer">Portábilis</a>
-            <span>Upstream do core</span>
+            <a class="org" href="https://ieducar.org/" rel="noopener noreferrer">
+              <span class="org-ico" aria-hidden="true"><img src="assets/img/org-portabilis.png" alt="" width="40" height="40"></span>
+              <span class="org-text">
+                <strong>Portábilis</strong>
+                <em>Mantenedora do core i-Educar</em>
+              </span>
+            </a>
           </li>
           <li>
-            <a href="https://buriti.dev.br/public/" rel="noopener noreferrer">Buriti</a>
-            <span>Módulos, página e contato</span>
+            <a class="org" href="https://buriti.dev.br/public/" rel="noopener noreferrer">
+              <span class="org-ico" aria-hidden="true"><img src="assets/img/org-buriti.png" alt="" width="40" height="40"></span>
+              <span class="org-text">
+                <strong>Buriti</strong>
+                <em>Módulos, operação e contato</em>
+              </span>
+            </a>
           </li>
           <li>
-            <a href="https://librecode.coop" rel="noopener noreferrer">LibreCode</a>
-            <span>Cooperação em implantação</span>
-          </li>
-          <li>
-            <a href="https://buriti.dev.br/public/#contato" rel="noopener noreferrer">Pedir contato</a>
-            <span>Formulário Buriti</span>
+            <a class="org" href="https://librecode.coop" rel="noopener noreferrer">
+              <span class="org-ico" aria-hidden="true"><img src="assets/img/org-librecode.png" alt="" width="40" height="40"></span>
+              <span class="org-text">
+                <strong>LibreCode</strong>
+                <em>Cooperação em implantação</em>
+              </span>
+            </a>
           </li>
         </ul>
       </div>
@@ -625,11 +623,9 @@
         <p class="footer-heading">Recursos</p>
         <ul>
           <li><a href="https://buriti.dev.br/public/#contato" rel="noopener noreferrer">Pedir contato</a></li>
-          <li><a href="privacidade.html">Privacidade e cookies</a></li>
           <li><a href="docs/apresentacao-gestao-educacional.pdf?v=8" download="iEducar-Gestao-Educacional-em-Rede.pdf">PDF de Gestão</a></li>
           <li><a href="docs/implantacao-consultoria.pdf">Roteiro de implantação</a></li>
-          <li><a href="docs/documentacao-padrao.pdf">Documentação padrão</a></li>
-          <li><a href="https://github.com/portabilis/i-educar" rel="noopener noreferrer">GitHub Portábilis</a></li>
+          <li><a href="privacidade.html">Privacidade e cookies</a></li>
           <li><a href="https://github.com/i-Educar" rel="noopener noreferrer">GitHub i-Educar</a></li>
         </ul>
       </div>
@@ -638,16 +634,13 @@
     <div class="footer-bar">
       <div class="wrap footer-bar-inner">
         <p>
-          Cooperação Buriti · LibreCode · alinhadas ao upstream Portábilis
+          Software Público Brasileiro
           · <a href="privacidade.html">Privacidade</a>
-          · <button type="button" class="footer-linkish" id="cookie-settings">Gerenciar cookies</button>
+          · <button type="button" class="footer-linkish" id="cookie-settings">Cookies</button>
         </p>
-        <a class="footer-top" href="#topo">Voltar ao topo</a>
       </div>
     </div>
   </footer>
-
-  <a class="to-top" href="#topo" id="to-top" aria-label="Voltar ao topo" hidden>↑</a>
 
   <div class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-labelledby="cookie-title" aria-live="polite">
     <div class="cookie-banner-inner wrap">
