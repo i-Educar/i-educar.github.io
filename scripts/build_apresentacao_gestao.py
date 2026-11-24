@@ -263,6 +263,11 @@ def flow_boxes(c, items, y, box_w=118, box_h=86, gap=14):
 
 def build():
     c = canvas.Canvas(str(OUT), pagesize=(W, H))
+    c.setTitle("iEducar - Gestão Educacional em Rede")
+    c.setSubject("Apresentação para a gestão municipal · pacote em rede")
+    c.setAuthor("Buriti · LibreCode")
+    c.setCreator("iEducar - Gestão Educacional em Rede")
+    c.setKeywords("iEducar, gestão educacional, educação municipal, Buriti, LibreCode, Portábilis")
 
     # ========== 1 COVER ==========
     c.setFillColor(INK)
