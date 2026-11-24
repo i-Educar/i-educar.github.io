@@ -17,7 +17,8 @@ ICON_DIR.mkdir(parents=True, exist_ok=True)
 
 # Formato próximo ao original (16:9)
 W, H = 960, 540
-MARGIN = 36
+MARGIN = 22
+CONTENT_W = W - 2 * MARGIN
 TOTAL = 16
 
 INK = HexColor("#03161b")
@@ -188,9 +189,12 @@ def card(c, x, y, w, h, fill=FOAM):
 
 
 def compare_table(c, rows, y_top, row_h=42):
-    """rows: (tema, sem, com)"""
-    col1, col2, col3 = 110, 340, 340
+    """rows: (tema, sem, com) — usa toda a largura útil."""
     x0 = MARGIN
+    total = CONTENT_W
+    col1 = 120
+    rest = total - col1
+    col2 = col3 = rest / 2
     # header
     c.setFillColor(INK2)
     c.roundRect(x0, y_top - 26, col1 + col2 + col3, 26, 6, fill=1, stroke=0)
@@ -226,11 +230,13 @@ def compare_table(c, rows, y_top, row_h=42):
         draw_lines(c, wrap(c, com, "Helvetica", 8, col3 - 18), x0 + col1 + col2 + 10, y + row_h - 16, "Helvetica", 8, 10, INK, 3)
 
 
-def flow_boxes(c, items, y, box_w=118, box_h=86, gap=14):
-    """items: list of (icon, title, subtitle)"""
+def flow_boxes(c, items, y, box_w=None, box_h=86, gap=12):
+    """items: list of (icon, title, subtitle) — espalha na largura útil."""
     n = len(items)
+    if box_w is None:
+        box_w = (CONTENT_W - (n - 1) * gap) / n
     total_w = n * box_w + (n - 1) * gap
-    x = max(MARGIN, (W - total_w) / 2)
+    x = MARGIN if abs(total_w - CONTENT_W) < 1 else max(MARGIN, (W - total_w) / 2)
     for i, (ic, title, sub) in enumerate(items):
         bx = x + i * (box_w + gap)
         c.setFillColor(HexColor("#f4fffb"))
@@ -273,7 +279,7 @@ def build():
     c.setFillColor(INK)
     c.rect(0, 0, W, H, fill=1, stroke=0)
     c.setFillColor(INK2)
-    c.rect(0, 0, W * 0.42, H, fill=1, stroke=0)
+    c.rect(0, 0, W * 0.38, H, fill=1, stroke=0)
     try:
         c.drawImage(ImageReader(str(IMG / "brand-mark.png")), 40, H - 120, width=72, height=72, mask="auto")
     except Exception:
@@ -304,7 +310,7 @@ def build():
 
     c.setFillColor(white)
     c.setFont("Helvetica-Bold", 14)
-    c.drawString(W * 0.48, H - 72, "Oferta para a rede municipal")
+    c.drawString(W * 0.405, H - 72, "Oferta para a rede municipal")
     # three pillars — occupy mid band
     pillars = [
         ("school", "1 cadastro", "O aluno nasce uma vez no iEducar."),
@@ -316,17 +322,17 @@ def build():
         c.setFillColor(HexColor("#f4fffb"))
         c.setStrokeColor(MINT2)
         c.setLineWidth(1.2)
-        c.roundRect(W * 0.48, y, W * 0.44, 80, 12, fill=1, stroke=1)
-        icon(c, ic, W * 0.48 + 14, y + 22, 38)
+        c.roundRect(W * 0.405, y, W - W * 0.405 - MARGIN, 80, 12, fill=1, stroke=1)
+        icon(c, ic, W * 0.405 + 14, y + 22, 38)
         c.setFillColor(INK)
         c.setFont("Helvetica-Bold", 13)
-        c.drawString(W * 0.48 + 62, y + 50, title)
+        c.drawString(W * 0.405 + 62, y + 50, title)
         c.setFillColor(INK2)
         c.setFont("Helvetica", 10)
         draw_lines(
             c,
-            wrap(c, d, "Helvetica", 10, W * 0.44 - 80),
-            W * 0.48 + 62,
+            wrap(c, d, "Helvetica", 10, W - W * 0.405 - MARGIN - 80),
+            W * 0.405 + 62,
             y + 32,
             "Helvetica",
             10,
@@ -337,13 +343,13 @@ def build():
 
     # Logos on light plates — dark lettering stays readable on dark cover
     try:
-        c.drawImage(ImageReader(str(IMG / "logo-buriti-plate.png")), W * 0.48, 28, width=130, height=65, mask="auto")
-        c.drawImage(ImageReader(str(IMG / "librecode-plate.png")), W * 0.48 + 140, 28, width=140, height=65, mask="auto")
+        c.drawImage(ImageReader(str(IMG / "logo-buriti-plate.png")), W * 0.405, 28, width=150, height=72, mask="auto")
+        c.drawImage(ImageReader(str(IMG / "librecode-plate.png")), W * 0.405 + 162, 28, width=160, height=72, mask="auto")
     except Exception:
         c.setFillColor(HexColor("#f4fffb"))
-        c.roundRect(W * 0.48, 36, 230, 54, 10, fill=1, stroke=0)
-        c.drawImage(ImageReader(str(IMG / "logo-buriti.png")), W * 0.48 + 10, 40, width=40, height=38, mask="auto")
-        c.drawImage(ImageReader(str(IMG / "librecode.png")), W * 0.48 + 70, 44, width=90, height=36, mask="auto")
+        c.roundRect(W * 0.42, 36, 280, 54, 10, fill=1, stroke=0)
+        c.drawImage(ImageReader(str(IMG / "logo-buriti.png")), W * 0.42 + 10, 40, width=40, height=38, mask="auto")
+        c.drawImage(ImageReader(str(IMG / "librecode.png")), W * 0.42 + 70, 44, width=90, height=36, mask="auto")
     c.setFillColor(HexColor("#9bb0b4"))
     c.setFont("Helvetica", 8)
     c.drawString(40, 18, "buriti.dev.br · librecode.coop · ieducar.org")
@@ -430,9 +436,8 @@ def build():
             ("chart", "Gestão pergunta", "SERVLITCYS / BI"),
         ],
         230,
-        box_w=128,
         box_h=100,
-        gap=14,
+        gap=12,
     )
     c.setFillColor(HexColor("#e8f6f2"))
     c.setStrokeColor(MINT)
@@ -484,21 +489,23 @@ def build():
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 10)
     c.drawString(MARGIN, H - 108, "Núcleo, microssistemas e módulos sob demanda — um só cadastro.")
+    gap_x, cols = 14, 4
+    card_w = (CONTENT_W - (cols - 1) * gap_x) / cols
     for i, (ic, title, d) in enumerate(mods):
-        col, row = i % 4, i // 4
-        x = MARGIN + col * 225
+        col, row = i % cols, i // cols
+        x = MARGIN + col * (card_w + gap_x)
         y = H - 280 - row * 148
         c.setFillColor(HexColor("#ffffff"))
         c.setStrokeColor(LINE)
         c.setLineWidth(1)
-        c.roundRect(x, y, 210, 132, 10, fill=1, stroke=1)
+        c.roundRect(x, y, card_w, 132, 10, fill=1, stroke=1)
         icon(c, ic, x + 14, y + 88, 30)
         c.setFillColor(INK)
         c.setFont("Helvetica-Bold", 12)
         c.drawString(x + 54, y + 100, title)
         c.setFillColor(INK2)
         c.setFont("Helvetica", 9)
-        draw_lines(c, wrap(c, d, "Helvetica", 9, 180), x + 14, y + 70, "Helvetica", 9, 12, INK2, 4)
+        draw_lines(c, wrap(c, d, "Helvetica", 9, card_w - 28), x + 14, y + 70, "Helvetica", 9, 12, INK2, 4)
     footer(c, 4)
     c.showPage()
 
@@ -534,9 +541,11 @@ def build():
         ("Organização", "Escola, curso, série, turma, quadro de horário, calendário e usuários por perfil."),
         ("Ano letivo", "Rematrícula, enturmação e a base que o censo, o diário e o transporte vão ler."),
     ]
+    gap_x, cols = 16, 3
+    card_w = (CONTENT_W - (cols - 1) * gap_x) / cols
     for i, (title, d) in enumerate(blocks):
-        x = MARGIN + i * 300
-        card(c, x, 145, 285, 210)
+        x = MARGIN + i * (card_w + gap_x)
+        card(c, x, 145, card_w, 210)
         c.setFillColor(MINT)
         c.circle(x + 24, 320, 9, fill=1, stroke=0)
         c.setFillColor(INK)
@@ -544,7 +553,7 @@ def build():
         c.drawString(x + 42, 314, title)
         c.setFillColor(INK2)
         c.setFont("Helvetica", 11)
-        draw_lines(c, wrap(c, d, "Helvetica", 11, 250), x + 18, 285, "Helvetica", 11, 15, INK2, 6)
+        draw_lines(c, wrap(c, d, "Helvetica", 11, card_w - 36), x + 18, 285, "Helvetica", 11, 15, INK2, 6)
     card(c, MARGIN, 55, W - 2 * MARGIN, 72, SAND_SOFT)
     c.setFillColor(SAND)
     c.setFont("Helvetica-Bold", 11)
@@ -658,9 +667,8 @@ def build():
             ("school", "Escola efetiva", "Matrícula oficial"),
         ],
         48,
-        box_w=220,
         box_h=95,
-        gap=28,
+        gap=20,
     )
     footer(c, 7)
     c.showPage()
@@ -763,17 +771,19 @@ def build():
         ("Projeção", "Ordem de grandeza do próximo FUNDEB, a partir da matrícula"),
         ("FUNDEB", "Discrepância de cadastro e leitura de repasses (valor indicativo)"),
     ]
+    gap_x, cols = 16, 3
+    card_w = (CONTENT_W - (cols - 1) * gap_x) / cols
     for i, (title, d) in enumerate(mods):
-        col, row = i % 3, i // 3
-        x = MARGIN + col * 300
+        col, row = i % cols, i // cols
+        x = MARGIN + col * (card_w + gap_x)
         y = H - 250 - row * 145
-        card(c, x, y, 285, 128)
+        card(c, x, y, card_w, 128)
         c.setFillColor(MINT)
         c.setFont("Helvetica-Bold", 12)
         c.drawString(x + 16, y + 95, title)
         c.setFillColor(INK2)
         c.setFont("Helvetica", 10)
-        draw_lines(c, wrap(c, d, "Helvetica", 10, 250), x + 16, y + 72, "Helvetica", 10, 13, INK2, 4)
+        draw_lines(c, wrap(c, d, "Helvetica", 10, card_w - 32), x + 16, y + 72, "Helvetica", 10, 13, INK2, 4)
     footer(c, 10)
     c.showPage()
 
@@ -821,9 +831,8 @@ def build():
             ("flow", "Power BI publica", "Reunião de gestão"),
         ],
         48,
-        box_w=220,
         box_h=95,
-        gap=28,
+        gap=20,
     )
     footer(c, 11)
     c.showPage()
@@ -867,8 +876,8 @@ def build():
     c.setFillColor(white)
     c.setFont("Helvetica-Bold", 9)
     c.drawString(MARGIN + 10, H - 136, "Público")
-    c.drawString(MARGIN + 220, H - 136, "Presencial")
-    c.drawString(MARGIN + 520, H - 136, "No Moodle")
+    c.drawString(MARGIN + CONTENT_W * 0.24, H - 136, "Presencial")
+    c.drawString(MARGIN + CONTENT_W * 0.58, H - 136, "No Moodle")
     y = H - 145
     for i, (a, b, d) in enumerate(rows):
         y -= 52
@@ -879,10 +888,10 @@ def build():
         c.drawString(MARGIN + 10, y + 20, a)
         c.setFillColor(INK2)
         c.setFont("Helvetica", 9)
-        c.drawString(MARGIN + 220, y + 20, b)
+        c.drawString(MARGIN + CONTENT_W * 0.24, y + 20, b)
         c.setFillColor(MINT)
         c.setFont("Helvetica", 9)
-        c.drawString(MARGIN + 520, y + 20, d)
+        c.drawString(MARGIN + CONTENT_W * 0.58, y + 20, d)
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 8)
     c.drawString(MARGIN, 48, "A aula ao vivo pode usar o BigBlueButton dentro do Moodle. O curso guarda presença e certificado.")
@@ -1016,10 +1025,10 @@ def build():
 
     # CTA box on the right mid-band
     c.setFillColor(INK)
-    c.roundRect(W - 340, 200, 300, 200, 14, fill=1, stroke=0)
+    c.roundRect(W - 360, 180, 338, 230, 14, fill=1, stroke=0)
     c.setFillColor(MINT2)
     c.setFont("Helvetica-Bold", 10)
-    c.drawString(W - 318, 370, "PRÓXIMO PASSO")
+    c.drawString(W - 338, 380, "PRÓXIMO PASSO")
     c.setFillColor(white)
     c.setFont("Helvetica-Bold", 12)
     draw_lines(
@@ -1029,10 +1038,10 @@ def build():
             "Escolher o ano letivo de entrada, as escolas piloto e quem da secretaria será o dono de matrícula, de censo e de transporte.",
             "Helvetica-Bold",
             12,
-            260,
+            290,
         ),
-        W - 318,
-        340,
+        W - 338,
+        350,
         "Helvetica-Bold",
         12,
         16,
@@ -1040,13 +1049,13 @@ def build():
         5,
     )
     c.setFillColor(HexColor("#f4fffb"))
-    c.roundRect(W - 318, 220, 256, 48, 8, fill=1, stroke=0)
+    c.roundRect(W - 338, 200, 290, 48, 8, fill=1, stroke=0)
     c.setFillColor(INK)
     c.setFont("Helvetica-Bold", 9)
-    c.drawString(W - 300, 248, "Contato")
+    c.drawString(W - 320, 228, "Contato")
     c.setFillColor(MINT)
     c.setFont("Helvetica", 8)
-    c.drawString(W - 300, 232, "buriti.dev.br/public/#contato")
+    c.drawString(W - 320, 212, "buriti.dev.br/public/#contato")
     try:
         c.drawImage(ImageReader(str(IMG / "logo-buriti-plate.png")), MARGIN, 42, width=70, height=38, mask="auto")
         c.drawImage(ImageReader(str(IMG / "librecode-plate.png")), MARGIN + 78, 42, width=82, height=38, mask="auto")
