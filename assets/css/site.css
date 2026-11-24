@@ -290,6 +290,87 @@ a.btn-disabled {
 }
 .cta-row { display: flex; flex-wrap: wrap; gap: .75rem; }
 
+.hero-path {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: .55rem;
+  align-items: stretch;
+  margin: 0 0 1.35rem;
+  max-width: min(56rem, 100%);
+}
+.hero-path-item {
+  display: grid;
+  gap: .28rem;
+  padding: .9rem 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(244, 255, 251, 0.14);
+  color: inherit;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, transform .2s var(--ease);
+}
+.hero-path-item:hover {
+  background: rgba(23, 165, 139, 0.16);
+  border-color: rgba(23, 165, 139, 0.5);
+  transform: translateY(-1px);
+}
+.hero-path-item.is-accent {
+  background: rgba(23, 165, 139, 0.2);
+  border-color: rgba(23, 165, 139, 0.55);
+}
+.hero-path-label {
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--mint-2);
+}
+.hero-path-item strong {
+  font-family: "Sora", sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f4fffb;
+}
+.hero-path-item em {
+  font-style: normal;
+  font-size: .8rem;
+  line-height: 1.35;
+  color: rgba(244, 255, 251, 0.62);
+}
+.hero-path-arrow {
+  width: 0.9rem;
+  height: 0.9rem;
+  align-self: center;
+  border-right: 2px solid var(--mint-2);
+  border-top: 2px solid var(--mint-2);
+  transform: rotate(45deg);
+  opacity: .8;
+}
+.adapt-block {
+  margin-top: 2.4rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--line);
+}
+.adapt-block h3 {
+  margin: 0 0 .7rem;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.adapt-block .lead { margin-bottom: 1.25rem; }
+
+@media (max-width: 860px) {
+  .hero-path {
+    grid-template-columns: 1fr;
+  }
+  .hero-path-arrow {
+    justify-self: center;
+    transform: rotate(135deg);
+  }
+}
+
 /* Full-bleed sections */
 .band {
   width: 100%;
