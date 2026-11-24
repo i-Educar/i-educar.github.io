@@ -33,65 +33,72 @@ PAPER = white
 
 
 def make_icon(name: str, kind: str, bg: tuple[int, int, int], light: bool = False) -> Path:
-    """light=True → white disc + dark glyph (for dark backgrounds)."""
+    """Filled silhouettes (survive PDF downscale). light=True = pale disc + dark glyph."""
     path = ICON_DIR / f"{name}{'-light' if light else ''}.png"
     size = 128
     im = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     if light:
-        d.ellipse((4, 4, 124, 124), fill=(244, 255, 251, 255))
-        d.ellipse((10, 10, 118, 118), outline=bg + (255,), width=4)
-        stroke = bg + (255,)
+        d.ellipse((2, 2, 126, 126), fill=(244, 255, 251, 255))
+        ink = (10, 79, 69, 255)
+        cut = (244, 255, 251, 255)
     else:
-        # darker disc so white glyph always pops
-        dark_bg = (10, 79, 69) if sum(bg) > 100 else bg
-        d.ellipse((4, 4, 124, 124), fill=dark_bg + (255,))
-        stroke = (255, 255, 255, 255)
-    w = 11
+        d.ellipse((2, 2, 126, 126), fill=(10, 79, 69, 255))
+        ink = (255, 255, 255, 255)
+        cut = (10, 79, 69, 255)
     if kind == "school":
-        d.line([(34, 92), (94, 92)], fill=stroke, width=w)
-        d.line([(40, 92), (40, 62), (64, 42), (88, 62), (88, 92)], fill=stroke, width=w)
-        d.rectangle([56, 70, 72, 92], outline=stroke, width=w - 2)
+        d.polygon([(64, 34), (98, 62), (98, 96), (30, 96), (30, 62)], fill=ink)
+        d.rectangle([56, 72, 72, 96], fill=cut)
+        d.rectangle([40, 68, 52, 80], fill=cut)
+        d.rectangle([76, 68, 88, 80], fill=cut)
     elif kind == "person":
-        d.ellipse((48, 30, 80, 62), outline=stroke, width=w)
-        d.arc((34, 68, 94, 118), 200, 340, fill=stroke, width=w)
+        d.ellipse((46, 28, 82, 64), fill=ink)
+        d.pieslice((28, 70, 100, 130), 200, 340, fill=ink)
     elif kind == "users":
-        d.ellipse((30, 34, 56, 60), outline=stroke, width=w - 1)
-        d.ellipse((72, 34, 98, 60), outline=stroke, width=w - 1)
-        d.arc((16, 70, 70, 120), 200, 340, fill=stroke, width=w - 1)
-        d.arc((58, 70, 112, 120), 200, 340, fill=stroke, width=w - 1)
+        d.ellipse((28, 30, 56, 58), fill=ink)
+        d.ellipse((72, 30, 100, 58), fill=ink)
+        d.pieslice((12, 64, 72, 124), 200, 340, fill=ink)
+        d.pieslice((56, 64, 116, 124), 200, 340, fill=ink)
     elif kind == "bus":
-        d.rounded_rectangle((28, 44, 100, 86), radius=10, outline=stroke, width=w)
-        d.line([(28, 64), (100, 64)], fill=stroke, width=w - 2)
-        d.ellipse((40, 82, 56, 98), outline=stroke, width=w - 2)
-        d.ellipse((72, 82, 88, 98), outline=stroke, width=w - 2)
+        d.rounded_rectangle((26, 40, 102, 88), radius=12, fill=ink)
+        d.rectangle([34, 48, 52, 64], fill=cut)
+        d.rectangle([58, 48, 76, 64], fill=cut)
+        d.rectangle([82, 48, 94, 64], fill=cut)
+        d.ellipse((38, 84, 56, 102), fill=ink)
+        d.ellipse((72, 84, 90, 102), fill=ink)
+        d.ellipse((42, 88, 52, 98), fill=cut)
+        d.ellipse((76, 88, 86, 98), fill=cut)
     elif kind == "chart":
-        d.line([(36, 96), (36, 36), (96, 36)], fill=stroke, width=w - 1)
-        d.rectangle([46, 70, 56, 96], fill=stroke)
-        d.rectangle([64, 54, 74, 96], fill=stroke)
-        d.rectangle([82, 42, 92, 96], fill=stroke)
+        d.rectangle([40, 68, 54, 98], fill=ink)
+        d.rectangle([60, 50, 74, 98], fill=ink)
+        d.rectangle([80, 36, 94, 98], fill=ink)
+        d.rectangle([34, 98, 100, 106], fill=ink)
     elif kind == "book":
-        d.rounded_rectangle((38, 30, 90, 100), radius=6, outline=stroke, width=w)
-        d.line([(48, 30), (48, 100)], fill=stroke, width=w - 2)
+        d.rounded_rectangle((36, 28, 92, 104), radius=8, fill=ink)
+        d.rectangle([48, 28, 54, 104], fill=cut)
+        d.rectangle([62, 48, 82, 54], fill=cut)
+        d.rectangle([62, 64, 82, 70], fill=cut)
     elif kind == "clipboard":
-        d.rounded_rectangle((40, 36, 88, 104), radius=8, outline=stroke, width=w)
-        d.rounded_rectangle((52, 28, 76, 44), radius=4, outline=stroke, width=w - 2)
-        d.line([(52, 60), (76, 60)], fill=stroke, width=w - 2)
-        d.line([(52, 74), (76, 74)], fill=stroke, width=w - 2)
+        d.rounded_rectangle((38, 36, 90, 108), radius=10, fill=ink)
+        d.rounded_rectangle((50, 26, 78, 44), radius=6, fill=ink)
+        d.rectangle([50, 56, 78, 62], fill=cut)
+        d.rectangle([50, 72, 78, 78], fill=cut)
+        d.rectangle([50, 88, 70, 94], fill=cut)
     elif kind == "family":
-        d.ellipse((34, 34, 60, 60), outline=stroke, width=w - 1)
-        d.ellipse((68, 38, 90, 60), outline=stroke, width=w - 1)
-        d.arc((20, 70, 74, 118), 200, 340, fill=stroke, width=w - 1)
-        d.arc((58, 72, 108, 118), 200, 340, fill=stroke, width=w - 1)
+        d.ellipse((32, 30, 60, 58), fill=ink)
+        d.ellipse((68, 34, 92, 58), fill=ink)
+        d.pieslice((16, 64, 76, 124), 200, 340, fill=ink)
+        d.pieslice((56, 68, 112, 124), 200, 340, fill=ink)
     elif kind == "check":
-        d.line([(40, 66), (56, 84), (90, 44)], fill=stroke, width=w + 1)
+        d.line([(38, 66), (56, 86), (94, 42)], fill=ink, width=14)
+        d.line([(38, 66), (56, 86), (94, 42)], fill=ink, width=10)
     elif kind == "flow":
-        d.ellipse((28, 52, 52, 76), outline=stroke, width=w - 1)
-        d.ellipse((76, 52, 100, 76), outline=stroke, width=w - 1)
-        d.line([(52, 64), (76, 64)], fill=stroke, width=w - 1)
-        d.polygon([(70, 56), (82, 64), (70, 72)], fill=stroke)
+        d.ellipse((24, 48, 56, 80), fill=ink)
+        d.ellipse((72, 48, 104, 80), fill=ink)
+        d.rectangle([52, 58, 76, 70], fill=ink)
+        d.polygon([(70, 48), (90, 64), (70, 80)], fill=ink)
     else:
-        d.ellipse((44, 44, 84, 84), outline=stroke, width=w)
+        d.ellipse((40, 40, 88, 88), fill=ink)
     im.save(path, "PNG")
     return path
 
@@ -305,7 +312,7 @@ def build():
         c.setStrokeColor(MINT2)
         c.setLineWidth(1.2)
         c.roundRect(W * 0.48, y, W * 0.44, 68, 10, fill=1, stroke=1)
-        icon(c, ic, W * 0.48 + 14, y + 20, 32)
+        icon(c, ic, W * 0.48 + 12, y + 16, 36)
         c.setFillColor(INK)
         c.setFont("Helvetica-Bold", 12)
         c.drawString(W * 0.48 + 56, y + 42, title)
@@ -467,11 +474,11 @@ def build():
     ]
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 10)
-    c.drawString(MARGIN, H - 118, "Núcleo, microssistemas e módulos sob demanda — um só cadastro.")
+    c.drawString(MARGIN, H - 110, "Núcleo, microssistemas e módulos sob demanda — um só cadastro.")
     for i, (ic, title, d) in enumerate(mods):
         col, row = i % 4, i // 4
         x = MARGIN + col * 225
-        y = H - 305 - row * 115
+        y = H - 288 - row * 118
         c.setFillColor(HexColor("#ffffff"))
         c.setStrokeColor(LINE)
         c.setLineWidth(1)
