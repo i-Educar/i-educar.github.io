@@ -1440,6 +1440,7 @@ body.album-open { overflow: hidden; }
 .social-btn svg {
   width: .95rem;
   height: .95rem;
+  display: block;
 }
 .footer-bar {
   border-top: 1px solid rgba(255,255,255,.06);
