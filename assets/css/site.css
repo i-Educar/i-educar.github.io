@@ -1,13 +1,13 @@
 :root {
-  --ink: #03161b;
-  --ink-2: #0a2a31;
-  --ink-3: #143a42;
+  --ink: #0e2a3a;
+  --ink-2: #143a42;
+  --ink-3: #1a5f78;
   --foam: #eef3f2;
   --paper: #ffffff;
-  --line: rgba(3, 22, 27, 0.1);
-  --line-strong: rgba(3, 22, 27, 0.16);
-  --mint: #0e7f6c;
-  --mint-2: #17a58b;
+  --line: rgba(14, 42, 58, 0.1);
+  --line-strong: rgba(14, 42, 58, 0.16);
+  --mint: #0d7a6f;
+  --mint-2: #159a88;
   --mint-soft: #d8f1ea;
   --sand: #b8891a;
   --sand-soft: #f5ead0;
