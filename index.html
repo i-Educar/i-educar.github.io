@@ -17,11 +17,25 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png">
-  <meta name="theme-color" content="#0d7a6f">
+  <meta name="theme-color" content="#1a5f9e" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0c11" media="(prefers-color-scheme: dark)">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('ieducar.tema');
+        if (t !== 'claro' && t !== 'escuro') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'escuro' : 'claro';
+        }
+        document.documentElement.setAttribute('data-tema', t);
+      } catch (e) {
+        document.documentElement.setAttribute('data-tema', 'claro');
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=buriti1">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=buriti-azul2">
 </head>
 <body>
   <header class="site-header">
@@ -32,6 +46,10 @@
         </span>
         iEducar <small>Gestão Educacional em Rede</small>
       </a>
+      <button type="button" class="tema-toggle" data-tema-toggle title="Alternar modo claro ou escuro" aria-label="Alternar modo claro ou escuro">
+        <svg class="ico-lua" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.1 22a9.9 9.9 0 0 1-7-2.9A10 10 0 0 1 11.2 2a1 1 0 0 1 1.1 1.3A8 8 0 0 0 20.7 13a1 1 0 0 1 1.3 1.1A9.9 9.9 0 0 1 12.1 22z"/></svg>
+        <svg class="ico-sol" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4.5a1 1 0 0 1-1-1V2a1 1 0 1 1 2 0v1.5a1 1 0 0 1-1 1zm0 15a1 1 0 0 1 1 1V22a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1zM4.5 13H3a1 1 0 1 1 0-2h1.5a1 1 0 1 1 0 2zm16.5-1a1 1 0 0 1-1 1h-1.5a1 1 0 1 1 0-2H20a1 1 0 0 1 1 1zM6.3 7.7a1 1 0 0 1 0-1.4L7.4 5.2A1 1 0 0 1 8.8 6.6L7.7 7.7a1 1 0 0 1-1.4 0zm10.9 10.9a1 1 0 0 1 0-1.4l1.1-1.1a1 1 0 1 1 1.4 1.4l-1.1 1.1a1 1 0 0 1-1.4 0zM7.7 16.3 6.6 17.4A1 1 0 1 1 5.2 16l1.1-1.1a1 1 0 0 1 1.4 1.4zm10.9-10.9 1.1-1.1A1 1 0 0 1 21.1 5.7L20 6.8a1 1 0 1 1-1.4-1.4zM12 8a4 4 0 1 1-4 4 4 4 0 0 1 4-4z"/></svg>
+      </button>
       <nav class="nav-flow" aria-label="Fluxo de implantação">
         <p class="nav-flow-label">Fluxo de implantação</p>
         <ol class="nav-flow-list">
@@ -181,8 +199,8 @@
           <article class="card">
             <div class="card-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><use href="assets/icons/sprite.svg#i-puzzle"></use></svg></div>
             <h3>Módulos sob demanda</h3>
-            <p>Busca ativa, atendimento, transporte, merenda, horários, ACT e demais exigências de edital — mesma identidade Buriti, na ordem que a gestão priorizar.</p>
-            <div class="pill-row"><span class="pill">Tema Buriti</span><span class="pill">Editais</span><span class="pill">BURI-TI</span></div>
+            <p>Pré-matrícula, transporte, alimentação, apps, exportação e demais exigências típicas de edital — na ordem que a gestão priorizar.</p>
+            <div class="pill-row"><span class="pill">Sob demanda</span><span class="pill">Editais</span><span class="pill">BURI-TI</span></div>
           </article>
         </div>
         <div class="pill-row" style="margin-top:1.2rem">
@@ -349,12 +367,12 @@
               O i-Diário é o microssistema pedagógico ligado ao iEducar: a sala trabalha no seu ritmo,
               sem cadastro paralelo. Entra quando o núcleo da secretaria já está estável.
             </p>
-            <a class="btn btn-dark" href="#provas" data-open-album="11">Ver tela do i-Diário</a>
+            <a class="btn btn-dark" href="#provas" data-open-album="2">Ver tela do i-Diário</a>
           </div>
           <div class="device">
             <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>rede · i-diario</span></div>
             <div class="device-screen">
-              <img src="assets/img/tela-idiario.jpg?v=buriti1" width="1600" height="900" alt="Tela do i-Diário" loading="lazy">
+              <img src="assets/img/tela-idiario.jpg" width="1600" height="900" alt="Tela do i-Diário" loading="lazy">
             </div>
           </div>
         </div>
@@ -414,94 +432,80 @@
         <div class="album-head">
           <div>
             <p class="kicker">Provas para a reunião</p>
-            <h2>Interfaces reais no tema Buriti</h2>
-            <p class="lead">Álbum capturado na PoC Laguna: entrada, painel, busca ativa, atendimento, logística, merenda, horários, formação, biblioteca, estoque, ACT e i-Diário.</p>
+            <h2>Mostre a solução na tela antes de fechar a pauta</h2>
+            <p class="lead">Álbum na ordem da operação: secretaria, professor, família, Censo, transporte, documentos, indicadores e capacitação.</p>
           </div>
         </div>
         <div class="album-grid" id="album-grid">
           <button type="button" class="album-item" data-album-index="0">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>entrada</span></div>
-              <div class="device-screen"><img src="assets/img/tela-login.jpg?v=buriti1" alt="Login Buriti" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1 · secretaria</span></div>
+              <div class="device-screen"><img src="assets/img/tela-ieducar-gestao.jpg" alt="Painel" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Portal de entrada</strong><span>Login + serviços externos</span></div>
+            <div class="meta"><strong>Painel da secretaria</strong><span>Visão da rede</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="1">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>painel</span></div>
-              <div class="device-screen"><img src="assets/img/tela-ieducar-gestao.jpg?v=buriti1" alt="Painel Buriti" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>1 · matrícula</span></div>
+              <div class="device-screen"><img src="assets/img/tela-matricula.jpg" alt="Matrícula" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Painel da secretaria</strong><span>Módulos e caixa do dia</span></div>
+            <div class="meta"><strong>Matrícula</strong><span>Cadastro oficial</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="2">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>busca ativa</span></div>
-              <div class="device-screen"><img src="assets/img/tela-busca-ativa.jpg?v=buriti1" alt="Busca Ativa" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>2 · i-diario</span></div>
+              <div class="device-screen"><img src="assets/img/tela-idiario.jpg" alt="i-Diário" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Busca Ativa</strong><span>Infrequência e família</span></div>
+            <div class="meta"><strong>i-Diário</strong><span>Professor na base</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="3">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>atendimento</span></div>
-              <div class="device-screen"><img src="assets/img/tela-atendimento.jpg?v=buriti1" alt="Atendimento" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>3 · vagas</span></div>
+              <div class="device-screen"><img src="assets/img/tela-fila.jpg" alt="Fila" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Atendimento</strong><span>Fila, agenda e acolhimento</span></div>
+            <div class="meta"><strong>Pré-matrícula</strong><span>Fila transparente</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="4">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>transporte</span></div>
-              <div class="device-screen"><img src="assets/img/tela-transporte.jpg?v=buriti1" alt="Transporte" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>4 · censo</span></div>
+              <div class="device-screen"><img src="assets/img/tela-censo.jpg" alt="Censo" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Transporte</strong><span>Frota, rotas e pedidos</span></div>
+            <div class="meta"><strong>Educacenso</strong><span>Menos correção final</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="5">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>merenda</span></div>
-              <div class="device-screen"><img src="assets/img/tela-alimentacao.jpg?v=buriti1" alt="Alimentação escolar" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5 · transporte</span></div>
+              <div class="device-screen"><img src="assets/img/tela-transporte.jpg" alt="Transporte" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Alimentação</strong><span>Cardápio e PNAE</span></div>
+            <div class="meta"><strong>Transporte</strong><span>Painel, mapa e fila</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="6">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>horários</span></div>
-              <div class="device-screen"><img src="assets/img/tela-horario.jpg?v=buriti1" alt="Quadro de horários" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>5 · merenda</span></div>
+              <div class="device-screen"><img src="assets/img/tela-alimentacao.jpg" alt="Alimentação escolar" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Quadro de horários</strong><span>Grade sem choque</span></div>
+            <div class="meta"><strong>Alimentação</strong><span>Cardápio e PNAE</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="7">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>formação</span></div>
-              <div class="device-screen"><img src="assets/img/tela-eventos.jpg?v=buriti1" alt="Eventos e formação" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>6 · documentos</span></div>
+              <div class="device-screen"><img src="assets/img/tela-relatorios.jpg" alt="Relatórios avançados" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Eventos / formação</strong><span>Inscrição e certificados</span></div>
+            <div class="meta"><strong>Relatórios</strong><span>Catálogo PDF/Excel/QR</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="8">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>biblioteca</span></div>
-              <div class="device-screen"><img src="assets/img/tela-biblioteca.jpg?v=buriti1" alt="Biblioteca" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>7 · indicadores</span></div>
+              <div class="device-screen"><img src="assets/img/tela-servlitcys.jpg" alt="SERVLITCYS" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Biblioteca</strong><span>Acervo e empréstimos</span></div>
+            <div class="meta"><strong>SERVLITCYS</strong><span>Indicadores para decidir</span></div>
           </button>
           <button type="button" class="album-item" data-album-index="9">
             <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>estoque</span></div>
-              <div class="device-screen"><img src="assets/img/tela-almoxarifado.jpg?v=buriti1" alt="Almoxarifado" width="1440" height="900" loading="lazy"></div>
+              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>capacitação</span></div>
+              <div class="device-screen"><img src="assets/img/tela-moodle.jpg" alt="Moodle" width="1600" height="900" loading="lazy"></div>
             </div>
-            <div class="meta"><strong>Almoxarifado</strong><span>Pedidos e entregas</span></div>
-          </button>
-          <button type="button" class="album-item" data-album-index="10">
-            <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>act</span></div>
-              <div class="device-screen"><img src="assets/img/tela-act.jpg?v=buriti1" alt="Contratações temporárias" width="1440" height="900" loading="lazy"></div>
-            </div>
-            <div class="meta"><strong>Contratações (ACT)</strong><span>Editais e candidatos</span></div>
-          </button>
-          <button type="button" class="album-item" data-album-index="11">
-            <div class="device">
-              <div class="device-bar" aria-hidden="true"><i></i><i></i><i></i><span>i-diario</span></div>
-              <div class="device-screen"><img src="assets/img/tela-idiario.jpg?v=buriti1" alt="i-Diário" width="1600" height="900" loading="lazy"></div>
-            </div>
-            <div class="meta"><strong>i-Diário</strong><span>Professor na base</span></div>
+            <div class="meta"><strong>Capacitação</strong><span>Moodle híbrido</span></div>
           </button>
         </div>
 
@@ -624,35 +628,44 @@
           </article>
         </div>
 
-        <p class="kicker" style="margin:0 0 .6rem">Módulos e extensões · tema Buriti</p>
-        <p class="lead" style="margin-bottom:1rem">
-          Catálogo plugável na identidade Buriti — estudante, logística, merenda, RH, apps e homologação —
-          para fechar requisitos típicos de termo de referência sem abandonar o Software Público.
+        <p class="kicker" style="margin:0 0 .6rem">Módulos e extensões · org i-Educar</p>
+        <p class="lead" style="margin-bottom:.6rem">
+          Catálogo plugável (i-Educar 2.12) para fechar requisitos típicos de termo de referência —
+          incluindo o pacote adaptado à PoC <strong>Laguna PE-77/2026</strong> — sem abandonar o Software Público.
+        </p>
+        <p class="plugins-legenda">
+          <span><strong>Desenvolvidos / espelhados na org</strong> · repositórios em github.com/i-Educar</span>
+          <span><strong>Laguna</strong> · módulos usados e adaptados no monorepo municipal</span>
         </p>
         <div class="plugin-grid" id="plugins" style="margin-bottom:2rem">
-          <article class="plugin"><span class="tag">Estudante</span><h3><a href="https://github.com/i-Educar/i-educar-busca-ativa-package" rel="noopener noreferrer">Busca Ativa</a></h3><p>Infrequência, alertas, processos e ponte com atendimento / Apps família.</p></article>
-          <article class="plugin"><span class="tag">Atendimento</span><h3><a href="https://github.com/i-Educar/i-educar-atendimento-estudante-package" rel="noopener noreferrer">Atendimento ao estudante</a></h3><p>Fila, agenda, registro com anexos e histórico.</p></article>
-          <article class="plugin"><span class="tag">Logística</span><h3><a href="https://github.com/i-Educar/i-educar-transporte-escolar-v2-package" rel="noopener noreferrer">Transporte Escolar v2</a></h3><p>Rotas, frota, mapa e portal da família.</p></article>
-          <article class="plugin"><span class="tag">Merenda</span><h3><a href="https://github.com/i-Educar/i-educar-alimentacao-escolar-package" rel="noopener noreferrer">Alimentação escolar</a></h3><p>Cardápio, restrições com laudo e mapa PNAE.</p></article>
-          <article class="plugin"><span class="tag">Horário</span><h3><a href="https://github.com/i-Educar/i-educar-horario-automatico-package" rel="noopener noreferrer">Quadro de horários</a></h3><p>Matriz, geração automática e detecção de choques.</p></article>
-          <article class="plugin"><span class="tag">Formação</span><h3><a href="https://github.com/i-Educar/i-educar-eventos-formacao-package" rel="noopener noreferrer">Eventos / formação</a></h3><p>Inscrições, presença e certificados.</p></article>
-          <article class="plugin"><span class="tag">Biblioteca</span><h3><a href="https://github.com/i-Educar/i-educar-biblioteca-package" rel="noopener noreferrer">Biblioteca</a></h3><p>Acervo, empréstimos e inventário escolar.</p></article>
-          <article class="plugin"><span class="tag">Estoque</span><h3><a href="https://github.com/i-Educar/i-educar-almoxarifado-escolar-package" rel="noopener noreferrer">Almoxarifado escolar</a></h3><p>Pedidos, saldos e remessas SME ↔ escolas.</p></article>
-          <article class="plugin"><span class="tag">RH</span><h3><a href="https://github.com/i-Educar/i-educar-contratacoes-temporarias-package" rel="noopener noreferrer">Contratações temporárias</a></h3><p>Editais ACT, portal do candidato e classificação.</p></article>
-          <article class="plugin"><span class="tag">RH</span><h3><a href="https://github.com/i-Educar/i-educar-servidor-educacional-package" rel="noopener noreferrer">Servidor educacional</a></h3><p>Lotação, vínculos e histórico funcional.</p></article>
-          <article class="plugin"><span class="tag">Apps</span><h3><a href="https://github.com/i-Educar/i-educar-apps-api-package" rel="noopener noreferrer">Apps API</a></h3><p>Contrato Sanctum para família e professores.</p></article>
-          <article class="plugin"><span class="tag">Documentos</span><h3><a href="https://github.com/i-Educar/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports 2.12.1</a></h3><p>Catálogo para editais, PDF/Excel e validação por QR.</p></article>
-          <article class="plugin"><span class="tag">Exportação</span><h3><a href="https://github.com/i-Educar/i-educar-exportacao-unificada-package" rel="noopener noreferrer">Exportação unificada</a></h3><p>PDF, Office e planilhas nos formatos de edital.</p></article>
-          <article class="plugin"><span class="tag">Censo</span><h3><a href="https://github.com/i-Educar/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3><p>Importação TXT do INEP.</p></article>
-          <article class="plugin"><span class="tag">Escolar</span><h3><a href="https://github.com/i-Educar/i-educar-escolar-aderencia-package" rel="noopener noreferrer">Aderência escolar</a></h3><p>Gabarito, uniforme, atas e gaps de gestão.</p></article>
-          <article class="plugin"><span class="tag">SLA</span><h3><a href="https://github.com/i-Educar/i-educar-solicitacao-servicos-package" rel="noopener noreferrer">Solicitação de serviços</a></h3><p>Chamados escola → SME com andamento.</p></article>
-          <article class="plugin"><span class="tag">Homologação</span><h3><a href="https://github.com/i-Educar/i-educar-laguna-ambiente-package" rel="noopener noreferrer">Checklist de ambiente</a></h3><p>Audita módulos do edital e povoa base de teste.</p></article>
-          <article class="plugin"><span class="tag">Indicadores</span><h3><a href="https://github.com/JaderGabriel/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI</a></h3><p>Painéis da secretaria.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Laguna · Core</span><h3><a href="https://github.com/i-Educar/i-educar" rel="noopener noreferrer">i-Educar 2.12 (distribuição)</a></h3><p>Espelho contínuo do upstream Portábilis + pacotes da rede Laguna.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Laguna · Manifesto</span><h3><a href="https://github.com/i-Educar/i-educar-laguna-core" rel="noopener noreferrer">Laguna core</a></h3><p>Mapa de módulos e conformidade PE-77/2026.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Laguna · Install</span><h3><a href="https://github.com/i-Educar/i-educar-laguna-install" rel="noopener noreferrer">Laguna install</a></h3><p>Scripts e tutorial de instalação 2.12 + módulos.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Laguna · Admin</span><h3><a href="https://github.com/i-Educar/i-educar-laguna-ambiente-package" rel="noopener noreferrer">Ambiente Laguna</a></h3><p>Auditoria de módulos, setup e otimização (`laguna:otimizar`).</p></article>
+          <article class="plugin"><span class="tag">Documentos</span><h3><a href="https://github.com/i-Educar/i-educar-advreport-package" rel="noopener noreferrer">Advanced Reports</a></h3><p>Catálogo para editais, PDF/Excel e validação por QR — sem Jasper.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Indicadores</span><h3><a href="https://github.com/i-Educar/i-educar-powerbi-package" rel="noopener noreferrer">BIS / Power BI</a></h3><p>Dashboards analíticos no i-Educar (`scripts/instalar-bis`).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Logística</span><h3><a href="https://github.com/i-Educar/i-educar-transporte-escolar-v2-package" rel="noopener noreferrer">Transporte Escolar v2</a></h3><p>Rotas, gastos e portal da família (TR 5.4).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Merenda</span><h3><a href="https://github.com/i-Educar/i-educar-alimentacao-escolar-package" rel="noopener noreferrer">Alimentação escolar</a></h3><p>Cardápio, restrições e mapa PNAE (TR 5.2).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Apps</span><h3><a href="https://github.com/i-Educar/i-educar-apps-api-package" rel="noopener noreferrer">Apps API</a></h3><p>Contrato Sanctum família/professores (TR 5.13/5.14).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Exportação</span><h3><a href="https://github.com/i-Educar/i-educar-exportacao-unificada-package" rel="noopener noreferrer">Exportação unificada</a></h3><p>PDF, Office e planilhas nos formatos de edital (TR 4.x).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Escolar</span><h3><a href="https://github.com/i-Educar/i-educar-escolar-aderencia-package" rel="noopener noreferrer">Aderência escolar</a></h3><p>Gaps de gestão escolar (TR 5.3).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">RH</span><h3><a href="https://github.com/i-Educar/i-educar-servidor-educacional-package" rel="noopener noreferrer">Servidor educacional</a></h3><p>Lotação, vínculos e histórico funcional (TR 5.1).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">ACT</span><h3><a href="https://github.com/i-Educar/i-educar-contratacoes-temporarias-package" rel="noopener noreferrer">Contratações temporárias</a></h3><p>Editais, chamadas e classificação (TR 5.15).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Estoque</span><h3><a href="https://github.com/i-Educar/i-educar-almoxarifado-escolar-package" rel="noopener noreferrer">Almoxarifado escolar</a></h3><p>Remessas e distribuição (TR 5.7).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Biblioteca</span><h3><a href="https://github.com/i-Educar/i-educar-biblioteca-package" rel="noopener noreferrer">Biblioteca</a></h3><p>Acervo, empréstimos e inventário (TR 5.5).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Atendimento</span><h3><a href="https://github.com/i-Educar/i-educar-atendimento-estudante-package" rel="noopener noreferrer">Atendimento ao estudante</a></h3><p>Agenda, prontuário e encaminhamentos (TR 5.9).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">SLA</span><h3><a href="https://github.com/i-Educar/i-educar-solicitacao-servicos-package" rel="noopener noreferrer">Solicitação de serviços</a></h3><p>Chamados escola → SME (TR 5.6).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Horário</span><h3><a href="https://github.com/i-Educar/i-educar-horario-automatico-package" rel="noopener noreferrer">Horário automático</a></h3><p>Grade com restrições de professor (TR 5.11).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Formação</span><h3><a href="https://github.com/i-Educar/i-educar-eventos-formacao-package" rel="noopener noreferrer">Eventos / formação</a></h3><p>Inscrições, frequência e certificados (TR 5.12).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Busca ativa</span><h3><a href="https://github.com/i-Educar/i-educar-busca-ativa-package" rel="noopener noreferrer">Busca Ativa Escolar</a></h3><p>Alertas de falta, reintegração e API familiar.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Censo</span><h3><a href="https://github.com/i-Educar/i-educar-educacenso-import-package" rel="noopener noreferrer">Educacenso Import</a></h3><p>Importação TXT do INEP (TR 5.10).</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Setup</span><h3><a href="https://github.com/i-Educar/i-educar-setup-package" rel="noopener noreferrer">Setup municipal</a></h3><p>Comandos `ieducar:setup` / matrículas com perfis.</p></article>
+          <article class="plugin"><span class="tag">Setup base</span><h3><a href="https://github.com/i-Educar/i-educar-setup-municipio-base-package" rel="noopener noreferrer">Setup município base</a></h3><p>BNCC, calendário, perfis e trilha completa.</p></article>
+          <article class="plugin"><span class="tag tag-laguna">Sala</span><h3><a href="https://github.com/i-Educar/i-diario" rel="noopener noreferrer">i-Diário</a></h3><p>Espelho Portábilis + docs Laguna PE-77/2026.</p></article>
+          <article class="plugin"><span class="tag">Acesso</span><h3><a href="https://github.com/portabilis/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula digital</a></h3><p>Fila e critérios públicos (TR 5.8) — adaptada no monorepo Laguna.</p></article>
+          <article class="plugin"><span class="tag">Identidade</span><h3>Login gov.br</h3><p>OpenID Connect na entrada (adaptável à rede).</p></article>
+          <article class="plugin"><span class="tag">Presença</span><h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE</a></h3><p>Biometria facial — integração adjacente.</p></article>
           <article class="plugin"><span class="tag">Analytics</span><h3><a href="https://github.com/JaderGabriel/serventec-servlitcys" rel="noopener noreferrer">SERVLITCYS</a></h3><p>Indicadores e mapa Horizonte.</p></article>
-          <article class="plugin"><span class="tag">Acesso</span><h3><a href="https://github.com/JaderGabriel/pre-matricula-digital" rel="noopener noreferrer">Pré-matrícula</a></h3><p>Fila e critérios públicos.</p></article>
-          <article class="plugin"><span class="tag">Identidade</span><h3>Login gov.br</h3><p>OpenID Connect na entrada.</p></article>
-          <article class="plugin"><span class="tag">Presença</span><h3><a href="https://github.com/JaderGabriel/i-educar-catraca-frequencia-package" rel="noopener noreferrer">Catraca / GIDE</a></h3><p>Biometria facial.</p></article>
-          <article class="plugin"><span class="tag">Operação</span><h3>Chamados · Pulse · SGP</h3><p>Suporte, monitoramento e MEC.</p></article>
         </div>
 
         <div class="coop" id="equipe">
@@ -934,6 +947,6 @@
     </div>
   </div>
 
-  <script src="assets/js/site.js?v=buriti1"></script>
+  <script src="assets/js/site.js?v=navspy2"></script>
 </body>
 </html>
